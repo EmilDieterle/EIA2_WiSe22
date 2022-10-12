@@ -11,13 +11,19 @@ console.log(predicade);
 console.log(object);
 
 
-for (let index: number = 5; index <= subject.length; index--) {
-    if (index == -1) {
+for (let index: number = 6; index <= subject.length; index--) {
+    if (index == 0) {
         break;
     }
-    console.log(subject[index]);
+    console.log(index);
     
 }
+
+function getVerse(subject: string, predicade: string, object: string) {
+    console.log(subject + predicade + object);
+}
+
+getVerse(subject: "a", predicade: "b", object: "c");
 
 
 });
