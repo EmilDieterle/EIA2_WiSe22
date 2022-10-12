@@ -19,7 +19,7 @@ for (let index: number = 6; index <= subject.length; index--) {
     
 }
 
-function getVerse(subject: string, predicade: string, object: string) {
+function getVerse(subject: string[], predicade: string[], object: string[]) {
     console.log(subject + predicade + object);
 }
 
