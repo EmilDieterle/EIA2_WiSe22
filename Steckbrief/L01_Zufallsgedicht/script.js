@@ -8,7 +8,7 @@ var L01_Zufallsgedicht;
         console.log(subject);
         console.log(predicade);
         console.log(object);
-        for (let index = 0; index <= subject.length; index++) {
+        for (let index = 5; index <= subject.length; index--) {
             //if (index == 0) {
             //  index = 1;
             // }

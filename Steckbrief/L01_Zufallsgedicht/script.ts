@@ -11,7 +11,7 @@ console.log(predicade);
 console.log(object);
 
 
-for (let index: number = 0; index <= subject.length; index++) {
+for (let index: number = 5; index <= subject.length; index--) {
     //if (index == 0) {
       //  index = 1;
    // }
