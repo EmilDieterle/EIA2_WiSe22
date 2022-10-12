@@ -9,9 +9,9 @@ var L01_Zufallsgedicht;
         console.log(predicade);
         console.log(object);
         for (let index = 5; index <= subject.length; index--) {
-            //if (index == 0) {
-            //  index = 1;
-            // }
+            if (index == -1) {
+                break;
+            }
             console.log(subject[index]);
         }
     });
