@@ -8,16 +8,13 @@ var L01_Zufallsgedicht;
         console.log(subject);
         console.log(predicade);
         console.log(object);
-        for (let index = 6; index <= subject.length; index--) {
-            if (index == 0) {
-                break;
-            }
+        for (let index = subject.length; index >= 1; index--) {
             console.log(index);
+            console.log(getVerse(subject, predicade, object));
         }
-        function getVerse(subject, predicade, object) {
-            console.log(subject + predicade + object);
+        function getVerse(_subject, _predicade, _object) {
+            return "A";
         }
-        getVerse(subject, "a", predicade, "b", object, "c");
     });
 })(L01_Zufallsgedicht || (L01_Zufallsgedicht = {}));
 //# sourceMappingURL=script.js.map
