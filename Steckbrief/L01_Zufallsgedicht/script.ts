@@ -1,31 +1,40 @@
+/*
+Aufgabe: <L01_Zufallsgedicht>
+Name: <Emil Dieterle>
+Matrikel: <271526>
+Datum: <13.10.2022>
+Quellen: <Mithilfe: Cindy Nguyen>
+*/
+
 namespace L01_Zufallsgedicht {
 
-    window.addEventListener("load", function() {
+    window.addEventListener("load", function () {
 
-let subject: string[] = ["Harry", "Hermine", "Ron", "Hagrid", "Snape", "Dumbledore"];
-let predicade: string[] = ["braut", "liebt", "studiert", "hasst", "zaubert", "zerstört"];
-let object: string[] = ["Zaubertränke", "den Grimm", "Lupin", "Hogwarts", "die Karte des Rumtreibers", "Dementoren"];
+        let subject: string[] = ["Harry", "Hermine", "Ron", "Hagrid", "Snape", "Dumbledore"];
+        let predicade: string[] = ["braut", "liebt", "studiert", "hasst", "zaubert", "zerstört"];
+        let object: string[] = ["Zaubertränke", "den Grimm", "Lupin", "Hogwarts", "die Karte des Rumtreibers", "Dementoren"];
 
-console.log(subject);
-console.log(predicade);
-console.log(object);
+        for (let index: number = subject.length; index >= 1; index--) {
+            console.log(getVerse(subject, predicade, object));
+            
+        }
 
-
-for (let index: number = 6; index <= subject.length; index--) {
-    if (index == 0) {
-        break;
-    }
-    console.log(index);
+        function getVerse(_subject: string[], _predicade: string[], _object: string[]): string {
     
-}
+            let mathSubject: number = Math.floor(Math.random() * _subject.length);
+            let mathPredicade: number = Math.floor(Math.random() * _predicade.length);
+            let mathObject: number = Math.floor(Math.random() * _object.length);
 
-function getVerse(subject: string[], predicade: string[], object: string[]) {
-    console.log(subject + predicade + object);
-}
+            let s: string = _subject[mathSubject];
+            let p: string = _predicade[mathPredicade];
+            let o: string = _object[mathObject];
+            
+            let verse: string = s + " " + p + " " + o;
 
-getVerse(subject: "a", predicade: "b", object: "c");
+            return verse;
 
+        }
 
-});
+    });
 
 }
