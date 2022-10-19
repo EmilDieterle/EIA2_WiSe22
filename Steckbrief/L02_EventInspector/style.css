@@ -1,0 +1,17 @@
+.container {
+
+    display: flex;
+    flex-direction: row;
+}
+
+#div0 {
+
+    padding: 50px;
+    border: 1px solid black;
+}
+
+#div1 {
+
+    padding: 50px;
+    border: 1px solid black;
+}
