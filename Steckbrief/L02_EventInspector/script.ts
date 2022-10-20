@@ -11,20 +11,23 @@ namespace L02_EventInspector {
     window.addEventListener("load", handleLoad);
 
     function handleLoad(_event: Event): void {
-        document.addEventListener("keyup", logInfo);
+        document.addEventListener("click", setInfoBox);
         document.addEventListener("click", logInfo);
+        document.addEventListener("keyup", logInfo);
 
         let div0: HTMLElement = <HTMLElement>document.querySelector("#div0");
-        div0.addEventListener("click", logInfo);
+        div0.addEventListener("click", setInfoBox);
+        document.addEventListener("click", logInfo);
         div0.addEventListener("keyup", logInfo);
 
-
         let div1: HTMLElement = <HTMLElement>document.querySelector("#div1");
-        div1.addEventListener("click", logInfo);
+        div1.addEventListener("click", setInfoBox);
+        document.addEventListener("click", logInfo);
         document.addEventListener("keyup", logInfo);
 
         let body: HTMLElement = <HTMLElement>document.querySelector("body");
-        body.addEventListener("click", logInfo);
+        body.addEventListener("click", setInfoBox);
+        document.addEventListener("click", logInfo);
         document.addEventListener("keyup", logInfo);
     }
 }
@@ -40,9 +43,10 @@ function setInfoBox(_event: MouseEvent): void {
 
     target.style.top = y;
     target.style.left = x;
+
 }
 
 function logInfo(_event: Event): void {
 
-    console.log(target);
+    console.log(_event);
 }

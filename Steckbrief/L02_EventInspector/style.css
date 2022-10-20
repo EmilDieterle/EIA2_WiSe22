@@ -2,18 +2,24 @@
 
     display: flex;
     flex-direction: row;
+    background-color:navajowhite;
+    width: 1000px;
+    height: 500px;
+    margin: auto;
 }
 
 #div0 {
 
-    padding: 50px;
-    border: 1px solid black;
+    padding: 150px;
+    background-color:brown;
+    margin: auto;
 }
 
 #div1 {
 
-    padding: 50px;
-    border: 1px solid black;
+    padding: 150px;
+    background-color:green;
+    margin: auto;
 }
 
 span {

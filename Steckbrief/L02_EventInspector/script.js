@@ -10,16 +10,20 @@ var L02_EventInspector;
 (function (L02_EventInspector) {
     window.addEventListener("load", handleLoad);
     function handleLoad(_event) {
-        document.addEventListener("keyup", logInfo);
+        document.addEventListener("click", setInfoBox);
         document.addEventListener("click", logInfo);
+        document.addEventListener("keyup", logInfo);
         let div0 = document.querySelector("#div0");
-        div0.addEventListener("click", logInfo);
+        div0.addEventListener("click", setInfoBox);
+        document.addEventListener("click", logInfo);
         div0.addEventListener("keyup", logInfo);
         let div1 = document.querySelector("#div1");
-        div1.addEventListener("click", logInfo);
+        div1.addEventListener("click", setInfoBox);
+        document.addEventListener("click", logInfo);
         document.addEventListener("keyup", logInfo);
         let body = document.querySelector("body");
-        body.addEventListener("click", logInfo);
+        body.addEventListener("click", setInfoBox);
+        document.addEventListener("click", logInfo);
         document.addEventListener("keyup", logInfo);
     }
 })(L02_EventInspector || (L02_EventInspector = {}));
@@ -32,6 +36,6 @@ function setInfoBox(_event) {
     target.style.left = x;
 }
 function logInfo(_event) {
-    console.log(target);
+    console.log(_event);
 }
 //# sourceMappingURL=script.js.map
