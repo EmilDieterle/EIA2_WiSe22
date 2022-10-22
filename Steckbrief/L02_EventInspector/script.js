@@ -38,4 +38,7 @@ function setInfoBox(_event) {
 function logInfo(_event) {
     console.log(_event);
 }
+let buttonEvent = new CustomEvent("click", { bubbles: true, detail: { number: 4 } });
+document.querySelector("#btn").dispatchEvent(buttonEvent);
+console.log(buttonEvent);
 //# sourceMappingURL=script.js.map
