@@ -1,0 +1,19 @@
+ul {
+    list-style-type: none;
+    }
+
+ul li {
+    background-color:aqua;
+    width: 140px;
+    height: 20px;
+    text-align: center;
+}
+
+/*div {
+    display: flex;
+    flex-direction: row;
+    background-color:aqua;
+    width: 140px;
+    height: 20px;
+    text-align: center;
+}*/
