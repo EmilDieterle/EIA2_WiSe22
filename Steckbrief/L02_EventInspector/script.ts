@@ -53,6 +53,6 @@ function logInfo(_event: Event): void {
 document.getElementById("#btn")?.addEventListener("click", function(): void {
 let buttonEvent: CustomEvent = new CustomEvent("click", {bubbles: true, detail: {number: 4}});
 document.querySelector("#btn").dispatchEvent(buttonEvent);
-console.log(customEvent);
+console.log(dispatchEvent);
 
 });
