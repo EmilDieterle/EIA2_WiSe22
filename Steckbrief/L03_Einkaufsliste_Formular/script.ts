@@ -33,9 +33,20 @@ document.getElementById("#input")?.addEventListener("click", function(): void {
     console.log("Hier kann ein ListItem hinzugefügt werden");
 });
 
+document.getElementById("#amount1")?.addEventListener("click", function(): void {
 
+    console.log("Hier wird die Anzahl der Bananen angegeben in Liste 1");
+});
 
+document.getElementById("#amount2")?.addEventListener("click", function(): void {
 
+    console.log("Hier wird die Anzahl der Äpfel angegeben in Liste 2");
+});
+
+document.getElementById("#textarea1")?.addEventListener("click", function(): void {
+
+    console.log("Hier kann ein Kommentar zu Liste 1 erstellt werden");
+});
 
 
 
