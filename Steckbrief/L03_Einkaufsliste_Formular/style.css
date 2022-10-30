@@ -4,15 +4,20 @@ ul {
 
 ul li {
     background-color:aqua;
-    width: 250px;
-    height: 80px;
+    width: 400px;
+    height: 40px;
+    padding-bottom: 20px;
     text-align: center;
-    margin:50px;
+    margin:10px;
 }
 
 ul li input {
     width: 60px;
     height: 20px;
+}
+
+ul li textarea {
+    margin-top: 40px;
 }
 
 /*div {
