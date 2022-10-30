@@ -50,6 +50,7 @@ function logInfo(_event: Event): void {
 
     console.log(_event);
 }
+
 function customEvent(): void {
 let buttonEvent: CustomEvent = new CustomEvent("click", {bubbles: true, detail: {number: 4}});
 document.querySelector("#btn").dispatchEvent(buttonEvent);
