@@ -48,6 +48,11 @@ document.getElementById("#textarea1")?.addEventListener("click", function(): voi
     console.log("Hier kann ein Kommentar zu Liste 1 erstellt werden");
 });
 
+document.getElementById("#textarea2")?.addEventListener("click", function(): void {
+
+    console.log("Hier kann ein Kommentar zu Liste 2 erstellt werden");
+});
+
 
 
 });

@@ -30,5 +30,8 @@ window.addEventListener("load", function () {
     document.getElementById("#textarea1")?.addEventListener("click", function () {
         console.log("Hier kann ein Kommentar zu Liste 1 erstellt werden");
     });
+    document.getElementById("#textarea2")?.addEventListener("click", function () {
+        console.log("Hier kann ein Kommentar zu Liste 2 erstellt werden");
+    });
 });
 //# sourceMappingURL=script.js.map
