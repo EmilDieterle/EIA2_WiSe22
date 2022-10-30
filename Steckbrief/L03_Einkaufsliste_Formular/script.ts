@@ -7,48 +7,57 @@ Datum: <29.10.2022>
 
 window.addEventListener("load", function (): void {
 
-document.querySelector(".fa-regular fa-circle")?.addEventListener("click", function(): void {
+let selectorRegularCircle: HTMLElement = document.querySelector(".fa-regular fa-circle")as unknown as HTMLElement;
+selectorRegularCircle.addEventListener("click", function(): void {
 
-console.log("fa-regular fa-circle ändert sich in fa-regular fa-circle-xmark. Ein Datum wird ausgegeben über dem Kauf");
+    console.log("fa-regular fa-circle ändert sich in fa-regular fa-circle-xmark. Ein Datum wird ausgegeben über dem Kauf");
 
 });
 
-document.querySelector(".fa-regular fa-circle-xmark")?.addEventListener("click", function(): void {
+let selectorCheckedCircle: HTMLElement = document.querySelector(".fa-regular fa-circle-xmark")as unknown as HTMLElement;
+selectorCheckedCircle.addEventListener("click", function(): void {
 
     console.log("fa-regular fa-circle-xmark ändert sich in fa-regular fa-circle");
     
     });
 
-document.getElementById("#btn")?.addEventListener("click", function(): void {
+let selectorButton: HTMLButtonElement = document.getElementById("#btn") as unknown as HTMLButtonElement;
+selectorButton.addEventListener("click", function(): void {
 
     console.log("Ein ListItem wird hinzugefügt");
 });
 
-document.querySelector("fa-solid fa-trash-can")?.addEventListener("click", function(): void {
+let selectorTrash: HTMLElement = document.querySelector("fa-solid fa-trash-can")as unknown as HTMLElement;
+selectorTrash.addEventListener("click", function(): void {
     console.log("Die Liste in der sich die Trash- can befindet, wird entfernt");
 });
 
-document.getElementById("#input")?.addEventListener("click", function(): void {
+let selectorInput: HTMLElement = document.getElementById("#input")as unknown as HTMLElement;
+selectorInput.addEventListener("click", function(): void {
 
     console.log("Hier kann ein ListItem hinzugefügt werden");
 });
 
-document.getElementById("#amount1")?.addEventListener("click", function(): void {
+let selectorAmount1: HTMLElement = document.getElementById("#amount1")as unknown as HTMLElement;
+selectorAmount1.addEventListener("click", function(): void {
 
     console.log("Hier wird die Anzahl der Bananen angegeben in Liste 1");
 });
 
-document.getElementById("#amount2")?.addEventListener("click", function(): void {
+let selectorAmount2: HTMLElement = document.getElementById("#amount2") as unknown as HTMLElement;
+selectorAmount2.addEventListener("click", function(): void {
 
     console.log("Hier wird die Anzahl der Äpfel angegeben in Liste 2");
 });
 
-document.getElementById("#textarea1")?.addEventListener("click", function(): void {
+let selectorText1: HTMLTextAreaElement = document.getElementById("#textarea1")as unknown as HTMLTextAreaElement;
+selectorText1.addEventListener("click", function(): void {
 
     console.log("Hier kann ein Kommentar zu Liste 1 erstellt werden");
 });
 
-document.getElementById("#textarea2")?.addEventListener("click", function(): void {
+let selectorText2: HTMLTextAreaElement = document.getElementById("#textarea2") as unknown as HTMLTextAreaElement;
+selectorText2.addEventListener("click", function(): void {
 
     console.log("Hier kann ein Kommentar zu Liste 2 erstellt werden");
 });

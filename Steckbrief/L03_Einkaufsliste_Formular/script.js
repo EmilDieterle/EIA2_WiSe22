@@ -6,31 +6,40 @@ Matrikel: <271526>
 Datum: <29.10.2022>
 */
 window.addEventListener("load", function () {
-    document.querySelector(".fa-regular fa-circle")?.addEventListener("click", function () {
+    let selectorRegularCircle = document.querySelector(".fa-regular fa-circle");
+    selectorRegularCircle.addEventListener("click", function () {
         console.log("fa-regular fa-circle ändert sich in fa-regular fa-circle-xmark. Ein Datum wird ausgegeben über dem Kauf");
     });
-    document.querySelector(".fa-regular fa-circle-xmark")?.addEventListener("click", function () {
+    let selectorCheckedCircle = document.querySelector(".fa-regular fa-circle-xmark");
+    selectorCheckedCircle.addEventListener("click", function () {
         console.log("fa-regular fa-circle-xmark ändert sich in fa-regular fa-circle");
     });
-    document.getElementById("#btn")?.addEventListener("click", function () {
+    let selectorButton = document.getElementById("#btn");
+    selectorButton.addEventListener("click", function () {
         console.log("Ein ListItem wird hinzugefügt");
     });
-    document.querySelector("fa-solid fa-trash-can")?.addEventListener("click", function () {
+    let selectorTrash = document.querySelector("fa-solid fa-trash-can");
+    selectorTrash.addEventListener("click", function () {
         console.log("Die Liste in der sich die Trash- can befindet, wird entfernt");
     });
-    document.getElementById("#input")?.addEventListener("click", function () {
+    let selectorInput = document.getElementById("#input");
+    selectorInput.addEventListener("click", function () {
         console.log("Hier kann ein ListItem hinzugefügt werden");
     });
-    document.getElementById("#amount1")?.addEventListener("click", function () {
+    let selectorAmount1 = document.getElementById("#amount1");
+    selectorAmount1.addEventListener("click", function () {
         console.log("Hier wird die Anzahl der Bananen angegeben in Liste 1");
     });
-    document.getElementById("#amount2")?.addEventListener("click", function () {
+    let selectorAmount2 = document.getElementById("#amount2");
+    selectorAmount2.addEventListener("click", function () {
         console.log("Hier wird die Anzahl der Äpfel angegeben in Liste 2");
     });
-    document.getElementById("#textarea1")?.addEventListener("click", function () {
+    let selectorText1 = document.getElementById("#textarea1");
+    selectorText1.addEventListener("click", function () {
         console.log("Hier kann ein Kommentar zu Liste 1 erstellt werden");
     });
-    document.getElementById("#textarea2")?.addEventListener("click", function () {
+    let selectorText2 = document.getElementById("#textarea2");
+    selectorText2.addEventListener("click", function () {
         console.log("Hier kann ein Kommentar zu Liste 2 erstellt werden");
     });
 });
