@@ -7,7 +7,7 @@ Datum: <29.10.2022>
 */
 window.addEventListener("load", function () {
     document.querySelector(".fa-regular fa-circle")?.addEventListener("click", function () {
-        console.log("fa-regular fa-circle ändert sich in fa-regular fa-circle-xmark");
+        console.log("fa-regular fa-circle ändert sich in fa-regular fa-circle-xmark. Ein Datum wird ausgegeben über dem Kauf");
     });
     document.querySelector(".fa-regular fa-circle-xmark")?.addEventListener("click", function () {
         console.log("fa-regular fa-circle-xmark ändert sich in fa-regular fa-circle");

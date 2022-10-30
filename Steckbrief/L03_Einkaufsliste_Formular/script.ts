@@ -9,7 +9,7 @@ window.addEventListener("load", function (): void {
 
 document.querySelector(".fa-regular fa-circle")?.addEventListener("click", function(): void {
 
-console.log("fa-regular fa-circle ändert sich in fa-regular fa-circle-xmark");
+console.log("fa-regular fa-circle ändert sich in fa-regular fa-circle-xmark. Ein Datum wird ausgegeben über dem Kauf");
 
 });
 
