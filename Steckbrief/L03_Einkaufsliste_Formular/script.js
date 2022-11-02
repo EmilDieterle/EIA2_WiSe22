@@ -8,39 +8,39 @@ Datum: <29.10.2022>
 window.addEventListener("load", function () {
     let selectorRegularCircle = document.querySelector(".fa-regular fa-circle");
     selectorRegularCircle.addEventListener("click", function () {
-        console.log("fa-regular fa-circle ändert sich in fa-regular fa-circle-xmark. Ein Datum wird ausgegeben über dem Kauf");
+        console.log("fa-regular fa-circle erhält die Klasse hidden von fa-regular fa-circle-xmark und fa-regular fa-circle-xmark ist nun sichtbar");
     });
     let selectorCheckedCircle = document.querySelector(".fa-regular fa-circle-xmark");
     selectorCheckedCircle.addEventListener("click", function () {
-        console.log("fa-regular fa-circle-xmark ändert sich in fa-regular fa-circle");
+        console.log("fa-regular fa-circle-xmark erhält die Klasse hidden von fa-regular fa-circle und fa-regular fa-circle ist nun sichtbar");
     });
     let selectorButton = document.getElementById("#btn");
     selectorButton.addEventListener("click", function () {
-        console.log("Ein ListItem wird hinzugefügt");
+        console.log("Es wird mit den eingegebenen Werten vor dem Button ein neues Div erschaffen");
+    });
+    let selectorInput = document.getElementById("#inputID");
+    selectorInput.addEventListener("click", function () {
+        console.log("Hier kann ein Item hinzugefügt werden");
+    });
+    let selectorAmount = document.getElementById("#amountID");
+    selectorAmount.addEventListener("click", function () {
+        console.log("Hier kann eine Zahlenmenge des Item hinzugefügt werden");
+    });
+    let selectorTextarea = document.getElementById("#textareaID");
+    selectorTextarea.addEventListener("click", function () {
+        console.log("Hier kann ein Kommentar zum Item erstellt werden");
+    });
+    let selectorDate = document.getElementById("#dateID");
+    selectorDate.addEventListener("click", function () {
+        console.log("Hier kann ein Datum zum Item hinzugefügt werden");
+    });
+    let selectorEdit = document.getElementById(".fa-solid fa-pen-to-square");
+    selectorEdit.addEventListener("click", function () {
+        console.log("Hier können die Eigenschaften des Items bearbeitet werden");
     });
     let selectorTrash = document.querySelector("fa-solid fa-trash-can");
     selectorTrash.addEventListener("click", function () {
-        console.log("Die Liste in der sich die Trash- can befindet, wird entfernt");
-    });
-    let selectorInput = document.getElementById("#input");
-    selectorInput.addEventListener("click", function () {
-        console.log("Hier kann ein ListItem hinzugefügt werden");
-    });
-    let selectorAmount1 = document.getElementById("#amount1");
-    selectorAmount1.addEventListener("click", function () {
-        console.log("Hier wird die Anzahl der Bananen angegeben in Liste 1");
-    });
-    let selectorAmount2 = document.getElementById("#amount2");
-    selectorAmount2.addEventListener("click", function () {
-        console.log("Hier wird die Anzahl der Äpfel angegeben in Liste 2");
-    });
-    let selectorText1 = document.getElementById("#textarea1");
-    selectorText1.addEventListener("click", function () {
-        console.log("Hier kann ein Kommentar zu Liste 1 erstellt werden");
-    });
-    let selectorText2 = document.getElementById("#textarea2");
-    selectorText2.addEventListener("click", function () {
-        console.log("Hier kann ein Kommentar zu Liste 2 erstellt werden");
+        console.log("Das Div, dem der Trash hinzugehört wird entfernt");
     });
 });
 //# sourceMappingURL=script.js.map

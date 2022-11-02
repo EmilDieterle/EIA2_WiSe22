@@ -10,56 +10,57 @@ window.addEventListener("load", function (): void {
 let selectorRegularCircle: HTMLElement = document.querySelector(".fa-regular fa-circle")as unknown as HTMLElement;
 selectorRegularCircle.addEventListener("click", function(): void {
 
-    console.log("fa-regular fa-circle ändert sich in fa-regular fa-circle-xmark. Ein Datum wird ausgegeben über dem Kauf");
+    console.log("fa-regular fa-circle erhält die Klasse hidden von fa-regular fa-circle-xmark und fa-regular fa-circle-xmark ist nun sichtbar");
 
 });
 
 let selectorCheckedCircle: HTMLElement = document.querySelector(".fa-regular fa-circle-xmark")as unknown as HTMLElement;
 selectorCheckedCircle.addEventListener("click", function(): void {
 
-    console.log("fa-regular fa-circle-xmark ändert sich in fa-regular fa-circle");
+    console.log("fa-regular fa-circle-xmark erhält die Klasse hidden von fa-regular fa-circle und fa-regular fa-circle ist nun sichtbar");
     
-    });
+});
 
 let selectorButton: HTMLButtonElement = document.getElementById("#btn") as unknown as HTMLButtonElement;
 selectorButton.addEventListener("click", function(): void {
 
-    console.log("Ein ListItem wird hinzugefügt");
+    console.log("Es wird mit den eingegebenen Werten vor dem Button ein neues Div erschaffen");
+});
+
+let selectorInput: HTMLElement = document.getElementById("#inputID")as unknown as HTMLElement;
+selectorInput.addEventListener("click", function(): void {
+
+    console.log("Hier kann ein Item hinzugefügt werden");
+});
+
+let selectorAmount: HTMLElement = document.getElementById("#amountID")as unknown as HTMLElement;
+selectorAmount.addEventListener("click", function(): void {
+
+    console.log("Hier kann eine Zahlenmenge des Item hinzugefügt werden");
+});
+
+let selectorTextarea: HTMLTextAreaElement = document.getElementById("#textareaID")as unknown as HTMLTextAreaElement;
+selectorTextarea.addEventListener("click", function(): void {
+
+    console.log("Hier kann ein Kommentar zum Item erstellt werden");
+});
+
+let selectorDate: HTMLTextAreaElement = document.getElementById("#dateID")as unknown as HTMLTextAreaElement;
+selectorDate.addEventListener("click", function(): void {
+
+    console.log("Hier kann ein Datum zum Item hinzugefügt werden");
+});
+
+let selectorEdit: HTMLElement = document.getElementById(".fa-solid fa-pen-to-square")as unknown as HTMLElement;
+selectorEdit.addEventListener("click", function(): void {
+
+    console.log("Hier können die Eigenschaften des Items bearbeitet werden");
 });
 
 let selectorTrash: HTMLElement = document.querySelector("fa-solid fa-trash-can")as unknown as HTMLElement;
 selectorTrash.addEventListener("click", function(): void {
-    console.log("Die Liste in der sich die Trash- can befindet, wird entfernt");
-});
 
-let selectorInput: HTMLElement = document.getElementById("#input")as unknown as HTMLElement;
-selectorInput.addEventListener("click", function(): void {
-
-    console.log("Hier kann ein ListItem hinzugefügt werden");
-});
-
-let selectorAmount1: HTMLElement = document.getElementById("#amount1")as unknown as HTMLElement;
-selectorAmount1.addEventListener("click", function(): void {
-
-    console.log("Hier wird die Anzahl der Bananen angegeben in Liste 1");
-});
-
-let selectorAmount2: HTMLElement = document.getElementById("#amount2") as unknown as HTMLElement;
-selectorAmount2.addEventListener("click", function(): void {
-
-    console.log("Hier wird die Anzahl der Äpfel angegeben in Liste 2");
-});
-
-let selectorText1: HTMLTextAreaElement = document.getElementById("#textarea1")as unknown as HTMLTextAreaElement;
-selectorText1.addEventListener("click", function(): void {
-
-    console.log("Hier kann ein Kommentar zu Liste 1 erstellt werden");
-});
-
-let selectorText2: HTMLTextAreaElement = document.getElementById("#textarea2") as unknown as HTMLTextAreaElement;
-selectorText2.addEventListener("click", function(): void {
-
-    console.log("Hier kann ein Kommentar zu Liste 2 erstellt werden");
+    console.log("Das Div, dem der Trash hinzugehört wird entfernt");
 });
 
 });
