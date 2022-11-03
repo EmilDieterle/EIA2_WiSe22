@@ -73,6 +73,14 @@ window.addEventListener("load", function () {
     //let selectorRegularCircle: HTMLElement = document.querySelector(".fa-regular fa-circle")as unknown as HTMLElement;
     uncheckedCircle.addEventListener("click", function () {
         console.log("fa-regular fa-circle erhält die Klasse hidden von fa-regular fa-circle-xmark und fa-regular fa-circle-xmark ist nun sichtbar");
+        uncheckedCircle.classList.remove("fa-regular", "fa-circle");
+        uncheckedCircle.classList.add("fa-regular", "fa-circle-check-xmark");
+        if (uncheckedCircle.getAttribute("fa-circle-check")) {
+            uncheckedCircle.classList.remove("fa-regular", "fa-circle");
+            checkedCircle.classList.remove("hidden");
+            uncheckedcircle.classList.add("hidden");
+            checkedCircle.classList.add("fa-regular", "fa-circle");
+        }
     });
     let selectorCheckedCircle = document.querySelector(".fa-regular fa-circle-xmark");
     selectorCheckedCircle.addEventListener("click", function () {

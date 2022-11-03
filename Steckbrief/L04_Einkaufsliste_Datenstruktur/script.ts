@@ -95,15 +95,21 @@ window.addEventListener("load", function (): void {
     uncheckedCircle.addEventListener("click", function(): void {
     
         console.log("fa-regular fa-circle erhält die Klasse hidden von fa-regular fa-circle-xmark und fa-regular fa-circle-xmark ist nun sichtbar");
+        uncheckedCircle.classList.remove("fa-regular", "fa-circle");
+        uncheckedCircle.classList.add("fa-regular", "fa-circle-check-xmark");
 
+        if (uncheckedCircle.getAttribute("fa-circle-check")) {
+            uncheckedCircle.classList.remove("fa-regular", "fa-circle");
+            checkedCircle.classList.remove("hidden");
+            uncheckedcircle.classList.add("hidden");
+            checkedCircle.classList.add("fa-regular", "fa-circle");
     
-    });
+     }});
     
     let selectorCheckedCircle: HTMLElement = document.querySelector(".fa-regular fa-circle-xmark")as unknown as HTMLElement;
     selectorCheckedCircle.addEventListener("click", function(): void {
     
         console.log("fa-regular fa-circle-xmark erhält die Klasse hidden von fa-regular fa-circle und fa-regular fa-circle ist nun sichtbar");
-        
     });
     
     //let selectorEdit: HTMLElement = document.getElementById(".fa-solid fa-pen-to-square")as unknown as HTMLElement;
