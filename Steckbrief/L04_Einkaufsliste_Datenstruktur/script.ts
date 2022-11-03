@@ -9,8 +9,8 @@ window.addEventListener("load", function (): void {
 
     let itemContainer: HTMLDivElement = document.getElementById("itemContainer") as HTMLDivElement;
     let selectorButton: HTMLButtonElement = document.getElementById("#btn") as HTMLButtonElement;
-
     let selectorInput: HTMLElement = document.getElementById("#inputID")as HTMLElement;
+    
     selectorInput.addEventListener("click", function(): void {
     
         console.log("Hier kann ein Item hinzugefügt werden.");
