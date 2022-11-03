@@ -88,11 +88,11 @@ window.addEventListener("load", function () {
     });
     //let selectorEdit: HTMLElement = document.getElementById(".fa-solid fa-pen-to-square")as unknown as HTMLElement;
     edit.addEventListener("click", function () {
-        console.log("Hier können die Eigenschaften der p- Elemente in dem Div bearbeitet werden");
+        console.log("Die Paragraphen werden als Kinder entfernt und durch die obrigen, passenden Text/- und Inputfelder ersetzt. Die davorigen Eingaben bleiben erhalten; Die Felder kann man wieder bearbeiten und durch einen neuen Button eingeben");
     });
     //let selectorTrash: HTMLElement = document.querySelector("fa-solid fa-trash-can")as unknown as HTMLElement;
     trash.addEventListener("click", function () {
-        console.log("Das Div, dem der Trash hinzugehört wird entfernt");
+        console.log("Das Div, dem der Trash hinzugehört wird als Kind vom itemContainer entfernt entfernt");
         itemContainer.removeChild(item);
     });
 });
