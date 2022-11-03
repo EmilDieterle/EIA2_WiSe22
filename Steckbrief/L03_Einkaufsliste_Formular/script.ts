@@ -24,13 +24,13 @@ selectorCheckedCircle.addEventListener("click", function(): void {
 let selectorButton: HTMLButtonElement = document.getElementById("#btn") as unknown as HTMLButtonElement;
 selectorButton.addEventListener("click", function(): void {
 
-    console.log("Es wird mit den eingegebenen Werten vor dem Button ein neues Div erschaffen");
+    console.log("Ein neues Div wird erschaffen. Die vorher eingegebenen Werte werden als <p> zu Kindern");
 });
 
 let selectorInput: HTMLElement = document.getElementById("#inputID")as unknown as HTMLElement;
 selectorInput.addEventListener("click", function(): void {
 
-    console.log("Hier kann ein Item hinzugefügt werden");
+    console.log("Hier kann ein Item hinzugefügt werden.");
 });
 
 let selectorAmount: HTMLElement = document.getElementById("#amountID")as unknown as HTMLElement;
@@ -54,7 +54,7 @@ selectorDate.addEventListener("click", function(): void {
 let selectorEdit: HTMLElement = document.getElementById(".fa-solid fa-pen-to-square")as unknown as HTMLElement;
 selectorEdit.addEventListener("click", function(): void {
 
-    console.log("Hier können die Eigenschaften des Items bearbeitet werden");
+    console.log("Hier können die Eigenschaften der p- Elemente in dem Div bearbeitet werden");
 });
 
 let selectorTrash: HTMLElement = document.querySelector("fa-solid fa-trash-can")as unknown as HTMLElement;
