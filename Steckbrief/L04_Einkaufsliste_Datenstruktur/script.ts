@@ -7,26 +7,6 @@ Datum: <.10.2022>
 
 window.addEventListener("load", function (): void {
 
-    let selectorRegularCircle: HTMLElement = document.querySelector(".fa-regular fa-circle")as unknown as HTMLElement;
-    selectorRegularCircle.addEventListener("click", function(): void {
-    
-        console.log("fa-regular fa-circle erhält die Klasse hidden von fa-regular fa-circle-xmark und fa-regular fa-circle-xmark ist nun sichtbar");
-    
-    });
-    
-    let selectorCheckedCircle: HTMLElement = document.querySelector(".fa-regular fa-circle-xmark")as unknown as HTMLElement;
-    selectorCheckedCircle.addEventListener("click", function(): void {
-    
-        console.log("fa-regular fa-circle-xmark erhält die Klasse hidden von fa-regular fa-circle und fa-regular fa-circle ist nun sichtbar");
-        
-    });
-    
-    let selectorButton: HTMLButtonElement = document.getElementById("#btn") as unknown as HTMLButtonElement;
-    selectorButton.addEventListener("click", function(): void {
-    
-        console.log("Ein neues Div wird erschaffen. Die vorher eingegebenen Werte werden als <p> zu Kindern");
-    });
-    
     let selectorInput: HTMLElement = document.getElementById("#inputID")as unknown as HTMLElement;
     selectorInput.addEventListener("click", function(): void {
     
@@ -39,8 +19,8 @@ window.addEventListener("load", function (): void {
         console.log("Hier kann eine Zahlenmenge des Item hinzugefügt werden");
     });
     
-    let selectorTextarea: HTMLTextAreaElement = document.getElementById("#textareaID")as unknown as HTMLTextAreaElement;
-    selectorTextarea.addEventListener("click", function(): void {
+    let selectorComment: HTMLTextAreaElement = document.getElementById("#textareaID")as unknown as HTMLTextAreaElement;
+    selectorComment.addEventListener("click", function(): void {
     
         console.log("Hier kann ein Kommentar zum Item erstellt werden");
     });
@@ -49,6 +29,69 @@ window.addEventListener("load", function (): void {
     selectorDate.addEventListener("click", function(): void {
     
         console.log("Hier kann ein Datum zum Item hinzugefügt werden");
+    });
+
+    let selectorButton: HTMLButtonElement = document.getElementById("#btn") as unknown as HTMLButtonElement;
+    selectorButton.addEventListener("click", function(): void {
+    
+        console.log("Ein neues Div wird erschaffen. Die vorher eingegebenen Werte werden als <p> zu Kindern");
+
+        let uncheckedCircle = document.createElement("i");
+        uncheckedCircle.classList.add("fa-regular fa-circle");
+
+        let checkedCircle = document.createElement("i");
+        checkedCircle.classList.add(".hidden");
+
+        let name = document.createElement("p");
+        name.classList.add("addedItem");
+        name.innerText = selectorInput.value;
+        //listContainer.appendChild(item);
+        selectorInput.value = "";
+
+        let amount = document.createElement("p");
+        item.classList.add("addedAmount");
+        amount.innerText = selectorAmount.value;
+        //listContainer.appendChild(item);
+        selectorAmount.value = "";
+
+        let comment = document.createElement("p");
+        comment.classList.add("addedComment");
+        comment.innerText = selectorComment.value;
+        //listContainer.appendChild(item);
+        selectorComment.value = "";
+
+        let date = document.createElement("p");
+        date.classList.add("addedComment");
+        date.innerText = selectorDate.value;
+        //listContainer.appendChild(item);
+        selectorDate.value = "";
+
+        let edit = document.createElement("i");
+        edit.classList.add("fa-solid fa-pen-to-square");
+
+        let trash = document.createElement("i");
+        edit.classList.add("fa-solid fa-trash-can");
+
+        let item = document.createElement("div");
+        item.classList.add("listStyle");
+        item.appendChild(uncheckedCircle);
+        item.appendChild(uncheckedCircle);
+        item.appendChild(list);
+        item.appendChild(trash);
+    });
+
+    let selectorRegularCircle: HTMLElement = document.querySelector(".fa-regular fa-circle")as unknown as HTMLElement;
+    selectorRegularCircle.addEventListener("click", function(): void {
+    
+        console.log("fa-regular fa-circle erhält die Klasse hidden von fa-regular fa-circle-xmark und fa-regular fa-circle-xmark ist nun sichtbar");
+    
+    });
+    
+    let selectorCheckedCircle: HTMLElement = document.querySelector(".fa-regular fa-circle-xmark")as unknown as HTMLElement;
+    selectorCheckedCircle.addEventListener("click", function(): void {
+    
+        console.log("fa-regular fa-circle-xmark erhält die Klasse hidden von fa-regular fa-circle und fa-regular fa-circle ist nun sichtbar");
+        
     });
     
     let selectorEdit: HTMLElement = document.getElementById(".fa-solid fa-pen-to-square")as unknown as HTMLElement;
