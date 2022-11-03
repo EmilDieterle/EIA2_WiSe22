@@ -9,11 +9,12 @@ window.addEventListener("load", handleLoad);
 
 function handleLoad(_event: Event): void {
 
-let itemContainer: HTMLDivElement = document.getElementById("itemContainer") as HTMLDivElement;
+let itemContainer: HTMLDivElement = document.getElementById("#itemContainer") as HTMLDivElement;
 let selectorInput: HTMLElement = document.getElementById("#inputID")as HTMLElement;
+let selectorAmount: HTMLElement = document.getElementById("#amountID")as HTMLElement;
+let selectorComment: HTMLTextAreaElement = document.getElementById("#commentID") as HTMLTextAreaElement;
+let selectorDate: HTMLElement = document.getElementById("#dateID") as HTMLElement;
 let selectorButton: HTMLButtonElement = document.getElementById("#btn") as HTMLButtonElement;
-
-}
 
 function addItem(): void {
 
@@ -70,9 +71,8 @@ function addItem(): void {
         item.appendChild(edit);
         item.appendChild(trash);
         itemContainer.appendChild(item);
-    }
 
-function circleChecked(): void {
+        function circleChecked(): void {
         console.log("fa-regular fa-circle erhält die Klasse hidden von fa-regular fa-circle-xmark und fa-regular fa-circle-xmark ist nun sichtbar");
         uncheckedCircle.classList.remove("fa-regular", "fa-circle");
         uncheckedCircle.classList.add("fa-regular", "fa-circle-check-xmark");
@@ -80,16 +80,16 @@ function circleChecked(): void {
         if (uncheckedCircle.getAttribute("fa-circle-check")) {
             uncheckedCircle.classList.remove("fa-regular", "fa-circle");
             checkedCircle.classList.remove("hidden");
-            uncheckedcircle.classList.add("hidden");
+            uncheckedCircle.classList.add("hidden");
             checkedCircle.classList.add("fa-regular", "fa-circle");
     }
  }
 
-function deleteItem(): void {
-    itemContainer.removeChild(item);
-}
+//        function deleteItem(): void {
+ //   itemContainer.removeChild(item);
+//}
 
-function editItem(): void {
+ //       function editItem(): void {
 
 }
 
@@ -101,10 +101,8 @@ selectorButton.addEventListener("click", addItem);
 
 uncheckedCircle.addEventListener("click", circleChecked);
 
-selectorButton.addEventListener("click", addItem); 
+}
 
-
-    
         //Hier kann ein Item hinzugefügt werden
     
         //Hier kann eine Zahlenmenge des Item hinzugefügt werden
