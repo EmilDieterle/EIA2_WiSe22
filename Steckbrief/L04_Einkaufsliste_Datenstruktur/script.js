@@ -48,7 +48,7 @@ window.addEventListener("load", function () {
         itemContainer.appendChild(comment);
         selectorComment.value = "";
         let date = document.createElement("p");
-        date.classList.add("addedComment");
+        date.classList.add("addedDate");
         date.innerText = selectorDate.value;
         itemContainer.appendChild(date);
         selectorDate.value = "";

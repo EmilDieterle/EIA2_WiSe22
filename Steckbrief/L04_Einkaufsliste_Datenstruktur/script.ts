@@ -65,7 +65,7 @@ window.addEventListener("load", function (): void {
         selectorComment.value = "";
 
         let date: HTMLParagraphElement = document.createElement("p");
-        date.classList.add("addedComment");
+        date.classList.add("addedDate");
         date.innerText = selectorDate.value;
         itemContainer.appendChild(date);
         selectorDate.value = "";
@@ -104,7 +104,7 @@ window.addEventListener("load", function (): void {
             uncheckedcircle.classList.add("hidden");
             checkedCircle.classList.add("fa-regular", "fa-circle");
     
-     }});
+    }});
     
     let selectorCheckedCircle: HTMLElement = document.querySelector(".fa-regular fa-circle-xmark")as unknown as HTMLElement;
     selectorCheckedCircle.addEventListener("click", function(): void {
