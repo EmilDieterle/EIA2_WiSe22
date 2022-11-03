@@ -6,6 +6,7 @@ Matrikel: <271526>
 Datum: <.10.2022>
 */
 window.addEventListener("load", function () {
+    let itemContainer = document.getElementById("itemContainer");
     let selectorInput = document.getElementById("#inputID");
     selectorInput.addEventListener("click", function () {
         console.log("Hier kann ein Item hinzugefügt werden.");
@@ -27,32 +28,36 @@ window.addEventListener("load", function () {
         console.log("Ein neues Div wird erschaffen. Die vorher eingegebenen Werte werden als <p> zu Kindern");
         let uncheckedCircle = document.createElement("i");
         uncheckedCircle.classList.add("fa-regular fa-circle");
+        itemContainer.appendChild(uncheckedCircle);
         let checkedCircle = document.createElement("i");
         checkedCircle.classList.add(".hidden");
+        itemContainer.appendChild(checkedCircle);
         let name = document.createElement("p");
         name.classList.add("addedItem");
         name.innerText = selectorInput.value;
-        //listContainer.appendChild(item);
+        itemContainer.appendChild(name);
         selectorInput.value = "";
         let amount = document.createElement("p");
-        item.classList.add("addedAmount");
+        amount.classList.add("addedAmount");
         amount.innerText = selectorAmount.value;
-        //listContainer.appendChild(item);
+        itemContainer.appendChild(amount);
         selectorAmount.value = "";
         let comment = document.createElement("p");
         comment.classList.add("addedComment");
         comment.innerText = selectorComment.value;
-        //listContainer.appendChild(item);
+        itemContainer.appendChild(comment);
         selectorComment.value = "";
         let date = document.createElement("p");
         date.classList.add("addedComment");
         date.innerText = selectorDate.value;
-        //listContainer.appendChild(item);
+        itemContainer.appendChild(date);
         selectorDate.value = "";
         let edit = document.createElement("i");
         edit.classList.add("fa-solid fa-pen-to-square");
+        itemContainer.appendChild(edit);
         let trash = document.createElement("i");
         edit.classList.add("fa-solid fa-trash-can");
+        itemContainer.appendChild(trash);
         let item = document.createElement("div");
         item.classList.add("addedDiv");
         item.appendChild(uncheckedCircle);
@@ -63,6 +68,7 @@ window.addEventListener("load", function () {
         item.appendChild(date);
         item.appendChild(edit);
         item.appendChild(trash);
+        itemContainer.appendChild(item);
     });
     let selectorRegularCircle = document.querySelector(".fa-regular fa-circle");
     selectorRegularCircle.addEventListener("click", function () {
