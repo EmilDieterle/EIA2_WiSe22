@@ -2,7 +2,7 @@
 Aufgabe: <L04_Einkaufsliste_Datenstruktur>
 Name: <Emil Dieterle>
 Matrikel: <271526>
-Datum: <.10.2022>
+Datum: <05.10.2022>
 */
 
 window.addEventListener("load", handleLoad);
@@ -10,15 +10,26 @@ window.addEventListener("load", handleLoad);
 function handleLoad(_event: Event): void {
 
 let itemContainer: HTMLDivElement = document.getElementById("#itemContainer") as HTMLDivElement;
+//Hier kann ein Item hinzugefügt werden
 let selectorInput: HTMLElement = document.getElementById("#inputID")as HTMLElement;
+//Hier kann eine Zahlenmenge des Item hinzugefügt werden
 let selectorAmount: HTMLElement = document.getElementById("#amountID")as HTMLElement;
+//Hier kann ein Kommentar zum Item erstellt werden
 let selectorComment: HTMLTextAreaElement = document.getElementById("#commentID") as HTMLTextAreaElement;
+//Hier kann ein Datum zum Item hinzugefügt werden
 let selectorDate: HTMLElement = document.getElementById("#dateID") as HTMLElement;
 let selectorButton: HTMLButtonElement = document.getElementById("#btn") as HTMLButtonElement;
 
-function addItem(): void {
+itemContainer.addEventListener("click", editItem);
 
-        //Ein neues Div wird erschaffen. Die vorher eingegebenen Werte werden als <p> zu Kindern und <i> Elemente werden hinzugefügt
+trash.addEventListener("click", deleteItem);
+
+selectorButton.addEventListener("click", addItem); 
+
+uncheckedCircle.addEventListener("click", circleChecked);
+
+//Ein neues Div wird erschaffen. Die vorher eingegebenen Werte werden als <p> zu Kindern und <i> Elemente werden hinzugefügt
+function addItem(): void {
 
         let uncheckedCircle: HTMLElement = document.createElement("i");
         uncheckedCircle.classList.add("fa-regular fa-circle");
@@ -72,8 +83,10 @@ function addItem(): void {
         item.appendChild(trash);
         itemContainer.appendChild(item);
 
-        function circleChecked(): void {
-        console.log("fa-regular fa-circle erhält die Klasse hidden von fa-regular fa-circle-xmark und fa-regular fa-circle-xmark ist nun sichtbar");
+}
+
+//fa-regular fa-circle erhält die Klasse hidden von fa-regular fa-circle-xmark und fa-regular fa-circle-xmark ist nun sichtbar
+function circleChecked(): void {
         uncheckedCircle.classList.remove("fa-regular", "fa-circle");
         uncheckedCircle.classList.add("fa-regular", "fa-circle-check-xmark");
     
@@ -85,34 +98,12 @@ function addItem(): void {
     }
  }
 
-//        function deleteItem(): void {
- //   itemContainer.removeChild(item);
-//}
-
- //       function editItem(): void {
-
+//Der ItemContainer entfernt das item Kind durch den Click des <i> trash Elements
+function deleteItem(): void {
+    itemContainer.removeChild(item);
 }
 
-itemContainer.addEventListener("click", editItem);
-
-trash.addEventListener("click", deleteItem);
-
-selectorButton.addEventListener("click", addItem); 
-
-uncheckedCircle.addEventListener("click", circleChecked);
+ //Die Paragraphen werden als Kinder entfernt und durch die obrigen, passenden Text/- und Inputfelder ersetzt. Die davorigen Eingaben bleiben erhalten; Die Felder kann man wieder bearbeiten und durch einen neuen Button eingeben
+ //       function editItem(): void {}
 
 }
-
-        //Hier kann ein Item hinzugefügt werden
-    
-        //Hier kann eine Zahlenmenge des Item hinzugefügt werden
-    
-        //Hier kann ein Kommentar zum Item erstellt werden
-    
-        //Hier kann ein Datum zum Item hinzugefügt werden
-    
-        //Ein neues Div wird erschaffen. Die vorher eingegebenen Werte werden als <p> zu Kindern und <i> Elemente werden hinzugefügt
-    
-        //fa-regular fa-circle erhält die Klasse hidden von fa-regular fa-circle-xmark und fa-regular fa-circle-xmark ist nun sichtbar
-    
-        //Die Paragraphen werden als Kinder entfernt und durch die obrigen, passenden Text/- und Inputfelder ersetzt. Die davorigen Eingaben bleiben erhalten; Die Felder kann man wieder bearbeiten und durch einen neuen Button eingeben
