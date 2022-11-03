@@ -54,10 +54,14 @@ window.addEventListener("load", function () {
         let trash = document.createElement("i");
         edit.classList.add("fa-solid fa-trash-can");
         let item = document.createElement("div");
-        item.classList.add("listStyle");
+        item.classList.add("addedDiv");
         item.appendChild(uncheckedCircle);
-        item.appendChild(uncheckedCircle);
-        item.appendChild(list);
+        item.appendChild(checkedCircle);
+        item.appendChild(name);
+        item.appendChild(amount);
+        item.appendChild(comment);
+        item.appendChild(date);
+        item.appendChild(edit);
         item.appendChild(trash);
     });
     let selectorRegularCircle = document.querySelector(".fa-regular fa-circle");
