@@ -7,9 +7,10 @@ Datum: <.10.2022>
 
 window.addEventListener("load", function (): void {
 
-    let itemContainer: HTMLDivElement = document.getElementById("itemContainer");
+    let itemContainer: HTMLDivElement = document.getElementById("itemContainer") as HTMLDivElement;
+    let selectorButton: HTMLButtonElement = document.getElementById("#btn") as HTMLButtonElement;
 
-    let selectorInput: HTMLElement = document.getElementById("#inputID")as unknown as HTMLElement;
+    let selectorInput: HTMLElement = document.getElementById("#inputID")as HTMLElement;
     selectorInput.addEventListener("click", function(): void {
     
         console.log("Hier kann ein Item hinzugefügt werden.");
@@ -33,10 +34,9 @@ window.addEventListener("load", function (): void {
         console.log("Hier kann ein Datum zum Item hinzugefügt werden");
     });
 
-    let selectorButton: HTMLButtonElement = document.getElementById("#btn") as unknown as HTMLButtonElement;
     selectorButton.addEventListener("click", function(): void {
     
-        console.log("Ein neues Div wird erschaffen. Die vorher eingegebenen Werte werden als <p> zu Kindern");
+        console.log("Ein neues Div wird erschaffen. Die vorher eingegebenen Werte werden als <p> zu Kindern und <i> Elemente werden hinzugefügt");
 
         let uncheckedCircle: HTMLElement = document.createElement("i");
         uncheckedCircle.classList.add("fa-regular fa-circle");
@@ -91,10 +91,11 @@ window.addEventListener("load", function (): void {
         itemContainer.appendChild(item);
     });
 
-    let selectorRegularCircle: HTMLElement = document.querySelector(".fa-regular fa-circle")as unknown as HTMLElement;
-    selectorRegularCircle.addEventListener("click", function(): void {
+    //let selectorRegularCircle: HTMLElement = document.querySelector(".fa-regular fa-circle")as unknown as HTMLElement;
+    uncheckedCircle.addEventListener("click", function(): void {
     
         console.log("fa-regular fa-circle erhält die Klasse hidden von fa-regular fa-circle-xmark und fa-regular fa-circle-xmark ist nun sichtbar");
+
     
     });
     
@@ -105,16 +106,18 @@ window.addEventListener("load", function (): void {
         
     });
     
-    let selectorEdit: HTMLElement = document.getElementById(".fa-solid fa-pen-to-square")as unknown as HTMLElement;
-    selectorEdit.addEventListener("click", function(): void {
+    //let selectorEdit: HTMLElement = document.getElementById(".fa-solid fa-pen-to-square")as unknown as HTMLElement;
+    edit.addEventListener("click", function(): void {
     
         console.log("Hier können die Eigenschaften der p- Elemente in dem Div bearbeitet werden");
+
     });
     
-    let selectorTrash: HTMLElement = document.querySelector("fa-solid fa-trash-can")as unknown as HTMLElement;
-    selectorTrash.addEventListener("click", function(): void {
+    //let selectorTrash: HTMLElement = document.querySelector("fa-solid fa-trash-can")as unknown as HTMLElement;
+    trash.addEventListener("click", function(): void {
     
         console.log("Das Div, dem der Trash hinzugehört wird entfernt");
+        itemContainer.removeChild(item);
     });
     
     });
