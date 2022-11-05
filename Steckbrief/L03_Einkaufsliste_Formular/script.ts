@@ -20,9 +20,9 @@ function handleLoad(_event: Event): void {
     let selectorDate: HTMLElement = document.querySelector("#dateID") as HTMLElement;
     let selectorButton: HTMLButtonElement = document.querySelector("#btn") as HTMLButtonElement;
     //Elemente, die nach der dem addItem- Event erstellt werden
-    let uncheckedCircle = document.querySelectorAll(".fa-regular fa-circle");
-    let trash: HTMLElement = document.querySelector(".fa-solid fa-trash-can") as HTMLElement;
-    let edit: HTMLElement = document.querySelector(".fa-solid fa-pen-to-square") as HTMLElement;
+    let uncheckedCircle: NodeList = document.querySelectorAll(".fa-regular fa-circle");
+    let trash: NodeList = document.querySelectorAll(".fa-solid fa-trash-can");
+    let edit: NodeList = document.querySelectorAll(".fa-solid fa-pen-to-square");
 
     selectorButton.addEventListener("click", addItem);
     uncheckedCircle.addEventListener("click", clickCircle);

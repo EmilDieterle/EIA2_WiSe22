@@ -19,8 +19,8 @@ function handleLoad(_event) {
     let selectorButton = document.querySelector("#btn");
     //Elemente, die nach der dem addItem- Event erstellt werden
     let uncheckedCircle = document.querySelectorAll(".fa-regular fa-circle");
-    let trash = document.querySelector(".fa-solid fa-trash-can");
-    let edit = document.querySelector(".fa-solid fa-pen-to-square");
+    let trash = document.querySelectorAll(".fa-solid fa-trash-can");
+    let edit = document.querySelectorAll(".fa-solid fa-pen-to-square");
     selectorButton.addEventListener("click", addItem);
     uncheckedCircle.addEventListener("click", clickCircle);
     trash.addEventListener("click", deleteItem);
