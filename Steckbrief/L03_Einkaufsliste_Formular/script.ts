@@ -34,9 +34,6 @@ function handleLoad(_event: Event): void {
         edit[x].addEventListener("click", editItem, false);
 }
     selectorButton.addEventListener("click", addItem);
-    //uncheckedCircle.addEventListener("click", clickCircle);
-    //trash.addEventListener("click", deleteItem);
-    //edit.addEventListener("click", editItem);
 
 }
 

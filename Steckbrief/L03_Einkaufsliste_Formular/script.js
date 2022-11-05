@@ -31,9 +31,6 @@ function handleLoad(_event) {
         edit[x].addEventListener("click", editItem, false);
     }
     selectorButton.addEventListener("click", addItem);
-    //uncheckedCircle.addEventListener("click", clickCircle);
-    //trash.addEventListener("click", deleteItem);
-    //edit.addEventListener("click", editItem);
 }
 function addItem() {
     console.log("Ein neues Div wird erschaffen. Die vorher eingegebenen Werte werden als <p> zu Kindern");
