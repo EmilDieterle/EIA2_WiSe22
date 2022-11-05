@@ -7,20 +7,20 @@ Datum: <29.10.2022>
 */
 window.addEventListener("load", handleLoad);
 function handleLoad(_event) {
-    let itemContainer = document.getElementById("#itemContainer");
+    let itemContainer = document.querySelector("#itemContainer");
     //Hier kann ein Item hinzugefügt werden
-    let selectorInput = document.getElementById("#inputID");
+    let selectorInput = document.querySelector("#inputID");
     //Hier kann eine Zahlenmenge des Item hinzugefügt werden
-    let selectorAmount = document.getElementById("#amountID");
+    let selectorAmount = document.querySelector("#amountID");
     //Hier kann ein Kommentar zum Item erstellt werden
-    let selectorComment = document.getElementById("#commentID");
+    let selectorComment = document.querySelector("#commentID");
     //Hier kann ein Datum zum Item hinzugefügt werden
-    let selectorDate = document.getElementById("#dateID");
-    let selectorButton = document.getElementById("#btn");
+    let selectorDate = document.querySelector("#dateID");
+    let selectorButton = document.querySelector("#btn");
     //Elemente, die nach der dem addItem- Event erstellt werden
-    let uncheckedCircle = document.querySelector("fa-regular fa-circle");
-    let trash = document.querySelector("fa-solid fa-trash-can");
-    let edit = document.querySelector("fa-solid fa-pen-to-square");
+    let uncheckedCircle = document.querySelectorAll(".fa-regular fa-circle");
+    let trash = document.querySelector(".fa-solid fa-trash-can");
+    let edit = document.querySelector(".fa-solid fa-pen-to-square");
     selectorButton.addEventListener("click", addItem);
     uncheckedCircle.addEventListener("click", circleChecked);
     trash.addEventListener("click", deleteItem);
@@ -29,9 +29,11 @@ function handleLoad(_event) {
 function addItem() {
     console.log("Ein neues Div wird erschaffen. Die vorher eingegebenen Werte werden als <p> zu Kindern");
 }
-function circleChecked() {
-    console.log("fa-regular fa-circle erhält die Klasse hidden von fa-regular fa-circle-xmark und fa-regular fa-circle-xmark ist nun sichtbar. Falls fa-regular fa-circle-xmark schon da ist, bekommt es die Klasse .hidden");
-}
+uncheckedCircle.forEach(uncheckedCircle => {
+    function circleChecked() {
+        console.log("fa-regular fa-circle erhält die Klasse hidden von fa-regular fa-circle-xmark und fa-regular fa-circle-xmark ist nun sichtbar. Falls fa-regular fa-circle-xmark schon da ist, bekommt es die Klasse .hidden");
+    }
+});
 function deleteItem() {
     console.log("Der ItemContainer entfernt das item Kind durch den Click des <i> trash Elements");
 }
