@@ -25,8 +25,13 @@ function handleLoad(_event: Event): void {
         uncheckedCircle[x].addEventListener("click", clickCircle, false);
 }
     let trash: NodeList = document.querySelectorAll(".fa-solid fa-trash-can");
+    for (let x: number = 0; x < trash.length; x++) {
+        trash[x].addEventListener("click", deleteItem, false);
+}
     let edit: NodeList = document.querySelectorAll(".fa-solid fa-pen-to-square");
-
+    for (let x: number = 0; x < edit.length; x++) {
+        edit[x].addEventListener("click", editItem, false);
+}
     selectorButton.addEventListener("click", addItem);
     //uncheckedCircle.addEventListener("click", clickCircle);
     //trash.addEventListener("click", deleteItem);

@@ -23,7 +23,13 @@ function handleLoad(_event) {
         uncheckedCircle[x].addEventListener("click", clickCircle, false);
     }
     let trash = document.querySelectorAll(".fa-solid fa-trash-can");
+    for (let x = 0; x < trash.length; x++) {
+        trash[x].addEventListener("click", deleteItem, false);
+    }
     let edit = document.querySelectorAll(".fa-solid fa-pen-to-square");
+    for (let x = 0; x < edit.length; x++) {
+        edit[x].addEventListener("click", editItem, false);
+    }
     selectorButton.addEventListener("click", addItem);
     //uncheckedCircle.addEventListener("click", clickCircle);
     //trash.addEventListener("click", deleteItem);
