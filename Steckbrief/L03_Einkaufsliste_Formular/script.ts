@@ -21,19 +21,14 @@ function handleLoad(_event: Event): void {
     let selectorButton: HTMLButtonElement = document.querySelector("#btn") as HTMLButtonElement;
 
     //Elemente, die nach der dem addItem- Event erstellt werden
-    let uncheckedCircle: NodeList = document.querySelectorAll("#itemContainer .addedDiv .fa-regular fa-circle");
-    for (let x: number = 0; x < uncheckedCircle.length; x++) {
-        uncheckedCircle[x].addEventListener("click", clickCircle, false);
-}
-    let trash: NodeList = document.querySelectorAll("#itemContainer .addedDiv .fa-solid fa-trash-can");
-    for (let x: number = 0; x < trash.length; x++) {
-        trash[x].addEventListener("click", deleteItem, false);
-}
-    let edit: NodeList = document.querySelectorAll("#itemContainer .addedDiv .fa-solid fa-pen-to-square");
-    for (let x: number = 0; x < edit.length; x++) {
-        edit[x].addEventListener("click", editItem, false);
-}
+    let uncheckedCircle: NodeListOf<HTMLElement> = document.querySelectorAll("#itemContainer .addedDiv .fa-regular fa-circle");
+    let trash: NodeListOf<HTMLElement> = document.querySelectorAll("#itemContainer .addedDiv .fa-solid fa-trash-can");
+    let edit: NodeListOf<HTMLElement> = document.querySelectorAll("#itemContainer .addedDiv .fa-solid fa-pen-to-square");
+
+    edit.addEventListener("click", editItem);
     selectorButton.addEventListener("click", addItem);
+    trash.addEventListener("click", deleteItem);
+    uncheckedCircle.addEventListener("click", clickCircle);
 
 }
 
