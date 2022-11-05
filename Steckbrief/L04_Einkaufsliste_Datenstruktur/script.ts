@@ -24,7 +24,7 @@ itemContainer.addEventListener("click", editItem);
 
 trash.addEventListener("click", deleteItem);
 
-selectorButton.addEventListener("click", addItem); 
+selectorButton.addEventListener("click", addItem);
 
 uncheckedCircle.addEventListener("click", circleChecked);
 
