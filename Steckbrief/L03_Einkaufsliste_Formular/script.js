@@ -29,15 +29,16 @@ function handleLoad(_event) {
 function addItem() {
     console.log("Ein neues Div wird erschaffen. Die vorher eingegebenen Werte werden als <p> zu Kindern");
 }
-uncheckedCircle.forEach(uncheckedCircle => {
-    function circleChecked() {
-        console.log("fa-regular fa-circle erhält die Klasse hidden von fa-regular fa-circle-xmark und fa-regular fa-circle-xmark ist nun sichtbar. Falls fa-regular fa-circle-xmark schon da ist, bekommt es die Klasse .hidden");
-    }
-});
+uncheckedCircle.forEach(fa - regular, fa - circle, {
+    //function circleChecked(): void {
+    fa
+} - regular, fa - circle.addEventListener("click", function circleChecked(event) {
+    console.log("fa-regular fa-circle erhält die Klasse hidden von fa-regular fa-circle-xmark und fa-regular fa-circle-xmark ist nun sichtbar. Falls fa-regular fa-circle-xmark schon da ist, bekommt es die Klasse .hidden");
+}));
 function deleteItem() {
     console.log("Der ItemContainer entfernt das item Kind durch den Click des <i> trash Elements");
 }
 function editItem() {
-    console.log("Die Paragraphen werden als Kinder entfernt und durch die obrigen, passenden Text/- und Inputfelder ersetzt. Die davorigen Eingaben bleiben erhalten; Die Felder kann man wieder bearbeiten und durch einen neuen Button eingeben");
+    console.log("Die <p> Elemente können bearbeitet werden");
 }
 //# sourceMappingURL=script.js.map
