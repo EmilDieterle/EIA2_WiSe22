@@ -30,7 +30,7 @@ function addItem() {
     console.log("Ein neues Div wird erschaffen. Die vorher eingegebenen Werte werden als <p> zu Kindern");
 }
 function circleChecked() {
-    console.log("fa-regular fa-circle erhält die Klasse hidden von fa-regular fa-circle-xmark und fa-regular fa-circle-xmark ist nun sichtbar");
+    console.log("fa-regular fa-circle erhält die Klasse hidden von fa-regular fa-circle-xmark und fa-regular fa-circle-xmark ist nun sichtbar. Falls fa-regular fa-circle-xmark schon da ist, bekommt es die Klasse .hidden");
 }
 function deleteItem() {
     console.log("Der ItemContainer entfernt das item Kind durch den Click des <i> trash Elements");
@@ -38,40 +38,4 @@ function deleteItem() {
 function editItem() {
     console.log("Die Paragraphen werden als Kinder entfernt und durch die obrigen, passenden Text/- und Inputfelder ersetzt. Die davorigen Eingaben bleiben erhalten; Die Felder kann man wieder bearbeiten und durch einen neuen Button eingeben");
 }
-//let selectorRegularCircle: HTMLElement = document.querySelector(".fa-regular fa-circle")as unknown as HTMLElement;
-//selectorRegularCircle.addEventListener("click", function(): void {
-//console.log("fa-regular fa-circle erhält die Klasse hidden von fa-regular fa-circle-xmark und fa-regular fa-circle-xmark ist nun sichtbar");
-//});
-//let selectorCheckedCircle: HTMLElement = document.querySelector(".fa-regular fa-circle-xmark")as unknown as HTMLElement;
-//selectorCheckedCircle.addEventListener("click", function(): void {
-//console.log("fa-regular fa-circle-xmark erhält die Klasse hidden von fa-regular fa-circle und fa-regular fa-circle ist nun sichtbar");
-//});
-//let selectorButton: HTMLButtonElement = document.getElementById("#btn") as unknown as HTMLButtonElement;
-//selectorButton.addEventListener("click", function(): void {
-//console.log("Ein neues Div wird erschaffen. Die vorher eingegebenen Werte werden als <p> zu Kindern");
-//});
-//let selectorInput: HTMLElement = document.getElementById("#inputID")as unknown as HTMLElement;
-//selectorInput.addEventListener("click", function(): void {
-//console.log("Hier kann ein Item hinzugefügt werden.");
-//});
-//let selectorAmount: HTMLElement = document.getElementById("#amountID")as unknown as HTMLElement;
-//selectorAmount.addEventListener("click", function(): void {
-//console.log("Hier kann eine Zahlenmenge des Item hinzugefügt werden");
-//});
-//let selectorTextarea: HTMLTextAreaElement = document.getElementById("#textareaID")as unknown as HTMLTextAreaElement;
-//selectorTextarea.addEventListener("click", function(): void {
-//console.log("Hier kann ein Kommentar zum Item erstellt werden");
-//});
-//let selectorDate: HTMLTextAreaElement = document.getElementById("#dateID")as unknown as HTMLTextAreaElement;
-//selectorDate.addEventListener("click", function(): void {
-//console.log("Hier kann ein Datum zum Item hinzugefügt werden");
-//});
-//let selectorEdit: HTMLElement = document.getElementById(".fa-solid fa-pen-to-square")as unknown as HTMLElement;
-//selectorEdit.addEventListener("click", function(): void {
-//console.log("Hier können die Eigenschaften der p- Elemente in dem Div bearbeitet werden");
-//});
-//let selectorTrash: HTMLElement = document.querySelector("fa-solid fa-trash-can")as unknown as HTMLElement;
-//selectorTrash.addEventListener("click", function(): void {
-//console.log("Das Div, dem der Trash hinzugehört wird entfernt");
-//});
 //# sourceMappingURL=script.js.map
