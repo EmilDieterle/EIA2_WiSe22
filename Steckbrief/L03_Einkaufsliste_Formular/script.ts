@@ -25,7 +25,7 @@ function handleLoad(_event: Event): void {
     let edit: HTMLElement = document.querySelector(".fa-solid fa-pen-to-square") as HTMLElement;
 
     selectorButton.addEventListener("click", addItem);
-    uncheckedCircle.addEventListener("click", circleChecked);
+    uncheckedCircle.addEventListener("click", clickCircle);
     trash.addEventListener("click", deleteItem);
     edit.addEventListener("click", editItem);
 
@@ -33,14 +33,11 @@ function handleLoad(_event: Event): void {
 
 function addItem(): void {
         console.log("Ein neues Div wird erschaffen. Die vorher eingegebenen Werte werden als <p> zu Kindern");
-    }
+}
 
-uncheckedCircle.forEach(fa - regular fa - circle => {
-//function circleChecked(): void {
-        fa - regular    fa - circle.addEventListener("click", function circleChecked(event) {
+function clickCircle(): void {
         console.log("fa-regular fa-circle erhält die Klasse hidden von fa-regular fa-circle-xmark und fa-regular fa-circle-xmark ist nun sichtbar. Falls fa-regular fa-circle-xmark schon da ist, bekommt es die Klasse .hidden");
- }
-});
+}
 
 function deleteItem(): void {  
         console.log("Der ItemContainer entfernt das item Kind durch den Click des <i> trash Elements");
