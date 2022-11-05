@@ -18,13 +18,16 @@ function handleLoad(_event) {
     let selectorDate = document.querySelector("#dateID");
     let selectorButton = document.querySelector("#btn");
     //Elemente, die nach der dem addItem- Event erstellt werden
-    let uncheckedCircle = document.querySelectorAll(".fa-regular fa-circle");
+    let uncheckedCircle = document.querySelectorAll("#itemContainer .addedDiv .fa-regular fa-circle");
+    for (let x = 0; x < uncheckedCircle.length; x++) {
+        uncheckedCircle[x].addEventListener("click", clickCircle, false);
+    }
     let trash = document.querySelectorAll(".fa-solid fa-trash-can");
     let edit = document.querySelectorAll(".fa-solid fa-pen-to-square");
     selectorButton.addEventListener("click", addItem);
-    uncheckedCircle.addEventListener("click", clickCircle);
-    trash.addEventListener("click", deleteItem);
-    edit.addEventListener("click", editItem);
+    //uncheckedCircle.addEventListener("click", clickCircle);
+    //trash.addEventListener("click", deleteItem);
+    //edit.addEventListener("click", editItem);
 }
 function addItem() {
     console.log("Ein neues Div wird erschaffen. Die vorher eingegebenen Werte werden als <p> zu Kindern");
