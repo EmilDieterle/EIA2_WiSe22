@@ -21,14 +21,23 @@ function handleLoad(_event: Event): void {
     let selectorButton: HTMLButtonElement = document.querySelector("#btn") as HTMLButtonElement;
 
     //Elemente, die nach der dem addItem- Event erstellt werden
-    let uncheckedCircle: NodeListOf<HTMLElement> = document.querySelectorAll("#itemContainer .addedDiv .fa-regular fa-circle");
-    let trash: NodeListOf<HTMLElement> = document.querySelectorAll("#itemContainer .addedDiv .fa-solid fa-trash-can");
-    let edit: NodeListOf<HTMLElement> = document.querySelectorAll("#itemContainer .addedDiv .fa-solid fa-pen-to-square");
+    let uncheckedCircle: HTMLElement = document.querySelector("#uncheckedCircle") as HTMLElement;
+    let checkedCircle: HTMLElement = document.querySelector("#checkedCircle") as HTMLElement;
+    //let uncheckedCircle: NodeListOf<HTMLElement> = document.querySelectorAll("#itemContainer .addedDiv .fa-regular fa-circle");
+    let trash1: HTMLElement = document.querySelector("#trash1") as HTMLElement;
+    let trash2: HTMLElement = document.querySelector("#trash2") as HTMLElement;
+    //let trash: NodeListOf<HTMLElement> = document.querySelectorAll("#itemContainer .addedDiv .fa-solid fa-trash-can");
+    let edit1: HTMLElement = document.querySelector("#edit1") as HTMLElement;
+    let edit2: HTMLElement = document.querySelector("#edit2") as HTMLElement;
+    //let edit: NodeListOf<HTMLElement> = document.querySelectorAll("#itemContainer .addedDiv .fa-solid fa-pen-to-square");
 
-    edit.addEventListener("click", editItem);
+    edit1.addEventListener("click", editItem);
+    edit2.addEventListener("click", editItem);
     selectorButton.addEventListener("click", addItem);
-    trash.addEventListener("click", deleteItem);
+    trash1.addEventListener("click", deleteItem);
+    trash2.addEventListener("click", deleteItem);
     uncheckedCircle.addEventListener("click", clickCircle);
+    checkedCircle.addEventListener("click", clickCircle);
 
 }
 

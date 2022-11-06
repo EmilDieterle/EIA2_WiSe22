@@ -18,19 +18,22 @@ function handleLoad(_event) {
     let selectorDate = document.querySelector("#dateID");
     let selectorButton = document.querySelector("#btn");
     //Elemente, die nach der dem addItem- Event erstellt werden
-    let uncheckedCircle = document.querySelectorAll("#itemContainer .addedDiv .fa-regular fa-circle");
-    for (let x = 0; x < uncheckedCircle.length; x++) {
-        uncheckedCircle[x].addEventListener("click", clickCircle, false);
-    }
-    let trash = document.querySelectorAll("#itemContainer .addedDiv .fa-solid fa-trash-can");
-    for (let x = 0; x < trash.length; x++) {
-        trash[x].addEventListener("click", deleteItem, false);
-    }
-    let edit = document.querySelectorAll("#itemContainer .addedDiv .fa-solid fa-pen-to-square");
-    for (let x = 0; x < edit.length; x++) {
-        edit[x].addEventListener("click", editItem, false);
-    }
+    let uncheckedCircle = document.querySelector("#uncheckedCircle");
+    let checkedCircle = document.querySelector("#checkedCircle");
+    //let uncheckedCircle: NodeListOf<HTMLElement> = document.querySelectorAll("#itemContainer .addedDiv .fa-regular fa-circle");
+    let trash1 = document.querySelector("#trash1");
+    let trash2 = document.querySelector("#trash2");
+    //let trash: NodeListOf<HTMLElement> = document.querySelectorAll("#itemContainer .addedDiv .fa-solid fa-trash-can");
+    let edit1 = document.querySelector("#edit1");
+    let edit2 = document.querySelector("#edit2");
+    //let edit: NodeListOf<HTMLElement> = document.querySelectorAll("#itemContainer .addedDiv .fa-solid fa-pen-to-square");
+    edit1.addEventListener("click", editItem);
+    edit2.addEventListener("click", editItem);
     selectorButton.addEventListener("click", addItem);
+    trash1.addEventListener("click", deleteItem);
+    trash2.addEventListener("click", deleteItem);
+    uncheckedCircle.addEventListener("click", clickCircle);
+    checkedCircle.addEventListener("click", clickCircle);
 }
 function addItem() {
     console.log("Ein neues Div wird erschaffen. Die vorher eingegebenen Werte werden als <p> zu Kindern");
