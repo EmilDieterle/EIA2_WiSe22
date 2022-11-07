@@ -20,23 +20,6 @@ var L04_Datenstruktur;
         let amount = document.querySelectorAll(".addedAmount");
         let comment = document.querySelectorAll(".addedComment");
         let date = document.querySelectorAll(".addedDate");
-        //Elemente, die nach der dem addItem- Event erstellt werden
-        //let check: NodeListOf<HTMLInputElement> = document.querySelectorAll(".check") as NodeListOf<HTMLInputElement>;
-        //check.forEach(element => {
-        //});
-        //let uncheckedCircle: NodeListOf<HTMLElement> = document.querySelectorAll("#itemContainer .addedDiv .check");
-        //trash.forEach(element => {
-        //        element.removeChild(item);
-        //});
-        //let trash: NodeListOf<HTMLElement> = document.querySelectorAll("#itemContainer .addedDiv .fa-solid fa-trash-can");
-        //let edit: NodeListOf<HTMLInputElement> = document.querySelectorAll(".edit") as NodeListOf<HTMLInputElement>;
-        //let edit: NodeListOf<HTMLElement> = document.querySelectorAll("#itemContainer .addedDiv .fa-solid fa-pen-to-square");
-        //selectorButton.addEventListener("click", addItem);
-        //itemContainer.addEventListener("click", addItem);
-        //edit.addEventListener("click", editItem);
-        //trash.addEventListener("click", deleteItem);
-        //Ein neues Div wird erschaffen. Die vorher eingegebenen Werte werden als <p> zu Kindern und <i> Elemente werden hinzugefügt
-        //function addItem(): void {
         selectorButton.addEventListener("click", function () {
             let check = document.createElement("input");
             check.type = "checkbox";
