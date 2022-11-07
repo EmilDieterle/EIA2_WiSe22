@@ -11,13 +11,20 @@ window.addEventListener("load", handleLoad);
 
 function handleLoad(_event: Event): void {
 
-let itemContainer: HTMLDivElement = document.querySelector("#itemContainer") as unknown as HTMLDivElement;
-let selectorInput: HTMLElement = document.querySelector("#inputID")as HTMLElement;
-let selectorAmount: HTMLElement = document.querySelector("#amountID")as HTMLElement;
-let selectorComment: HTMLTextAreaElement = document.querySelector("#commentID") as HTMLTextAreaElement;
-let selectorDate: HTMLElement = document.querySelector("#dateID") as HTMLElement;
-let selectorButton: HTMLButtonElement = document.querySelector("#btn") as HTMLButtonElement;
+        function generateContent(data);
 
+        let itemContainer: HTMLDivElement = document.querySelector("#itemContainer") as unknown as HTMLDivElement;
+        let selectorInput: HTMLElement = document.querySelector("#inputID")as HTMLElement;
+        let selectorAmount: HTMLElement = document.querySelector("#amountID")as HTMLElement;
+        let selectorComment: HTMLTextAreaElement = document.querySelector("#commentID") as HTMLTextAreaElement;
+        let selectorDate: HTMLElement = document.querySelector("#dateID") as HTMLElement;
+        let selectorButton: HTMLButtonElement = document.querySelector("#btn") as HTMLButtonElement;
+
+        let item:NodeListOf<HTMLElement> = document.querySelectorAll(".addedDiv") as NodeListOf<HTMLElement>;
+        let name: NodeListOf<HTMLElement> = document.querySelectorAll(".addedItem") as NodeListOf<HTMLElement>;
+        let amount: NodeListOf<HTMLElement> = document.querySelectorAll(".addedAmount") as NodeListOf<HTMLElement>;
+        let comment: NodeListOf<HTMLElement> = document.querySelectorAll(".addedComment") as NodeListOf<HTMLElement>;
+        let date: NodeListOf<HTMLElement> = document.querySelectorAll(".addedDate") as NodeListOf<HTMLElement>;
 
 
 //Elemente, die nach der dem addItem- Event erstellt werden
@@ -26,7 +33,6 @@ let selectorButton: HTMLButtonElement = document.querySelector("#btn") as HTMLBu
         
 //});
 //let uncheckedCircle: NodeListOf<HTMLElement> = document.querySelectorAll("#itemContainer .addedDiv .check");
-//let trash: NodeListOf<HTMLInputElement> = document.querySelectorAll(".trash") as NodeListOf<HTMLInputElement>;
 //trash.forEach(element => {
 //        element.removeChild(item);
 //});
@@ -43,7 +49,7 @@ let selectorButton: HTMLButtonElement = document.querySelector("#btn") as HTMLBu
 
 //Ein neues Div wird erschaffen. Die vorher eingegebenen Werte werden als <p> zu Kindern und <i> Elemente werden hinzugefügt
 //function addItem(): void {
-selectorButton.addEventListener("click", function(): void {
+        selectorButton.addEventListener("click", function(): void {
 
         let check: HTMLInputElement = document.createElement("input");
         check.type = "checkbox";
@@ -96,12 +102,10 @@ selectorButton.addEventListener("click", function(): void {
         edit.addEventListener("click", editItem);
         trash.addEventListener("click", deleteItem);
 
-        //Der ItemContainer entfernt das item Kind durch den Click des <i> trash Elements
         function deleteItem(): void {
         itemContainer.removeChild(item);
     }
     
-     //Die Paragraphen werden als Kinder entfernt und durch die obrigen, passenden Text/- und Inputfelder ersetzt. Die davorigen Eingaben bleiben erhalten; Die Felder kann man wieder bearbeiten und durch einen neuen Button eingeben
         function editItem(): void {
                 console.log("edit- Funktion ist klickbar");
                 //name.contentEditable = true;

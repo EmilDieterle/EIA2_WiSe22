@@ -15,12 +15,16 @@ var L04_Datenstruktur;
         let selectorComment = document.querySelector("#commentID");
         let selectorDate = document.querySelector("#dateID");
         let selectorButton = document.querySelector("#btn");
+        let item = document.querySelectorAll(".addedDiv");
+        let name = document.querySelectorAll(".addedItem");
+        let amount = document.querySelectorAll(".addedAmount");
+        let comment = document.querySelectorAll(".addedComment");
+        let date = document.querySelectorAll(".addedDate");
         //Elemente, die nach der dem addItem- Event erstellt werden
         //let check: NodeListOf<HTMLInputElement> = document.querySelectorAll(".check") as NodeListOf<HTMLInputElement>;
         //check.forEach(element => {
         //});
         //let uncheckedCircle: NodeListOf<HTMLElement> = document.querySelectorAll("#itemContainer .addedDiv .check");
-        //let trash: NodeListOf<HTMLInputElement> = document.querySelectorAll(".trash") as NodeListOf<HTMLInputElement>;
         //trash.forEach(element => {
         //        element.removeChild(item);
         //});
@@ -76,11 +80,9 @@ var L04_Datenstruktur;
             itemContainer.appendChild(item);
             edit.addEventListener("click", editItem);
             trash.addEventListener("click", deleteItem);
-            //Der ItemContainer entfernt das item Kind durch den Click des <i> trash Elements
             function deleteItem() {
                 itemContainer.removeChild(item);
             }
-            //Die Paragraphen werden als Kinder entfernt und durch die obrigen, passenden Text/- und Inputfelder ersetzt. Die davorigen Eingaben bleiben erhalten; Die Felder kann man wieder bearbeiten und durch einen neuen Button eingeben
             function editItem() {
                 console.log("edit- Funktion ist klickbar");
                 //name.contentEditable = true;
