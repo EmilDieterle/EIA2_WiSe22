@@ -1,6 +1,6 @@
 namespace L04_Datenstruktur {
 
-    interface Item {
+    export interface Item {
         name: string;
         amount: number;
         comment: string;
