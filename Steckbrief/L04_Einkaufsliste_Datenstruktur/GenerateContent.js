@@ -8,7 +8,7 @@ var L04_Datenstruktur;
             let group = null;
             switch (category) {
                 case "item":
-                    let group = createSelect(items);
+                    let group = createSelect(items, category);
                     break;
                 default:
                     break;
@@ -19,7 +19,13 @@ var L04_Datenstruktur;
         }
     }
     L04_Datenstruktur.generateContent = generateContent;
-    function createSelect(_items) {
+    function createSelect(_items, _category) {
+        let group = document.createElement("div");
+        for (let item of _items) {
+            let name = document.createElement("p");
+            //
+            //
+        }
         return null;
     }
 })(L04_Datenstruktur || (L04_Datenstruktur = {}));

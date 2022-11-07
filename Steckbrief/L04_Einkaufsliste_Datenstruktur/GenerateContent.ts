@@ -8,7 +8,7 @@ namespace L04_Datenstruktur {
 
             switch (category) {
                 case "item":
-                    let group: HTMLSelectElement = createSelect(items);
+                    let group: HTMLSelectElement = createSelect(items, category);
                     break;
             
                 default:
@@ -24,8 +24,14 @@ namespace L04_Datenstruktur {
                 
             }
 
-    function createSelect(_items: Item[]): HTMLElement | null {
-                return null;
+    function createSelect(_items: Item[] _category: string): HTMLElement | null {
+        let group: HTMLDivElement = document.createElement("div");
+        for (let item of _items) {
+            let name: HTMLElement = document.createElement("p");
+            //
+            //
+        }
+        return null;
 
             }
         }
