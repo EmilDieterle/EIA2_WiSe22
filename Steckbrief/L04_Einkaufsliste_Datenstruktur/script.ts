@@ -2,42 +2,53 @@
 Aufgabe: <L04_Einkaufsliste_Datenstruktur>
 Name: <Emil Dieterle>
 Matrikel: <271526>
-Datum: <05.10.2022>
+Datum: <06.10.2022>
 */
+
+namespace L04_Datenstruktur {
 
 window.addEventListener("load", handleLoad);
 
 function handleLoad(_event: Event): void {
 
-let itemContainer: HTMLDivElement = document.getElementById("#itemContainer") as HTMLDivElement;
-//Hier kann ein Item hinzugefügt werden
-let selectorInput: HTMLElement = document.getElementById("#inputID")as HTMLElement;
-//Hier kann eine Zahlenmenge des Item hinzugefügt werden
-let selectorAmount: HTMLElement = document.getElementById("#amountID")as HTMLElement;
-//Hier kann ein Kommentar zum Item erstellt werden
-let selectorComment: HTMLTextAreaElement = document.getElementById("#commentID") as HTMLTextAreaElement;
-//Hier kann ein Datum zum Item hinzugefügt werden
-let selectorDate: HTMLElement = document.getElementById("#dateID") as HTMLElement;
-let selectorButton: HTMLButtonElement = document.getElementById("#btn") as HTMLButtonElement;
+let itemContainer: HTMLDivElement = document.querySelector("#itemContainer") as unknown as HTMLDivElement;
+let selectorInput: HTMLElement = document.querySelector("#inputID")as HTMLElement;
+let selectorAmount: HTMLElement = document.querySelector("#amountID")as HTMLElement;
+let selectorComment: HTMLTextAreaElement = document.querySelector("#commentID") as HTMLTextAreaElement;
+let selectorDate: HTMLElement = document.querySelector("#dateID") as HTMLElement;
+let selectorButton: HTMLButtonElement = document.querySelector("#btn") as HTMLButtonElement;
 
-itemContainer.addEventListener("click", editItem);
 
-trash.addEventListener("click", deleteItem);
 
-selectorButton.addEventListener("click", addItem);
+//Elemente, die nach der dem addItem- Event erstellt werden
+//let check: NodeListOf<HTMLInputElement> = document.querySelectorAll(".check") as NodeListOf<HTMLInputElement>;
+//check.forEach(element => {
+        
+//});
+//let uncheckedCircle: NodeListOf<HTMLElement> = document.querySelectorAll("#itemContainer .addedDiv .check");
+//let trash: NodeListOf<HTMLInputElement> = document.querySelectorAll(".trash") as NodeListOf<HTMLInputElement>;
+//trash.forEach(element => {
+//        element.removeChild(item);
+//});
+//let trash: NodeListOf<HTMLElement> = document.querySelectorAll("#itemContainer .addedDiv .fa-solid fa-trash-can");
+//let edit: NodeListOf<HTMLInputElement> = document.querySelectorAll(".edit") as NodeListOf<HTMLInputElement>;
+//let edit: NodeListOf<HTMLElement> = document.querySelectorAll("#itemContainer .addedDiv .fa-solid fa-pen-to-square");
 
-uncheckedCircle.addEventListener("click", circleChecked);
+//selectorButton.addEventListener("click", addItem);
+//itemContainer.addEventListener("click", addItem);
+//edit.addEventListener("click", editItem);
+//trash.addEventListener("click", deleteItem);
+
+
 
 //Ein neues Div wird erschaffen. Die vorher eingegebenen Werte werden als <p> zu Kindern und <i> Elemente werden hinzugefügt
-function addItem(): void {
+//function addItem(): void {
+selectorButton.addEventListener("click", function(): void {
 
-        let uncheckedCircle: HTMLElement = document.createElement("i");
-        uncheckedCircle.classList.add("fa-regular fa-circle");
-        itemContainer.appendChild(uncheckedCircle);
-
-        let checkedCircle: HTMLElement = document.createElement("i");
-        checkedCircle.classList.add(".hidden");
-        itemContainer.appendChild(checkedCircle);
+        let check: HTMLInputElement = document.createElement("input");
+        check.type = "checkbox";
+        check.classList.add("check");
+        itemContainer.appendChild(check);
 
         let name: HTMLParagraphElement = document.createElement("p");
         name.classList.add("addedItem");
@@ -64,17 +75,16 @@ function addItem(): void {
         selectorDate.value = "";
 
         let edit: HTMLElement = document.createElement("i");
-        edit.classList.add("fa-solid fa-pen-to-square");
+        edit.classList.add("fa-solid", "fa-pen-to-square");
         itemContainer.appendChild(edit);
 
         let trash: HTMLElement = document.createElement("i");
-        edit.classList.add("fa-solid fa-trash-can");
+        trash.classList.add("fa-solid", "fa-trash-can");
         itemContainer.appendChild(trash);
 
         let item: HTMLDivElement = document.createElement("div");
         item.classList.add("addedDiv");
-        item.appendChild(uncheckedCircle);
-        item.appendChild(checkedCircle);
+        item.appendChild(check);
         item.appendChild(name);
         item.appendChild(amount);
         item.appendChild(comment);
@@ -83,27 +93,26 @@ function addItem(): void {
         item.appendChild(trash);
         itemContainer.appendChild(item);
 
-}
+        edit.addEventListener("click", editItem);
+        trash.addEventListener("click", deleteItem);
 
-//fa-regular fa-circle erhält die Klasse hidden von fa-regular fa-circle-xmark und fa-regular fa-circle-xmark ist nun sichtbar
-function circleChecked(): void {
-        uncheckedCircle.classList.remove("fa-regular", "fa-circle");
-        uncheckedCircle.classList.add("fa-regular", "fa-circle-check-xmark");
-    
-        if (uncheckedCircle.getAttribute("fa-circle-check")) {
-            uncheckedCircle.classList.remove("fa-regular", "fa-circle");
-            checkedCircle.classList.remove("hidden");
-            uncheckedCircle.classList.add("hidden");
-            checkedCircle.classList.add("fa-regular", "fa-circle");
+        //Der ItemContainer entfernt das item Kind durch den Click des <i> trash Elements
+        function deleteItem(): void {
+        itemContainer.removeChild(item);
     }
- }
+    
+     //Die Paragraphen werden als Kinder entfernt und durch die obrigen, passenden Text/- und Inputfelder ersetzt. Die davorigen Eingaben bleiben erhalten; Die Felder kann man wieder bearbeiten und durch einen neuen Button eingeben
+        function editItem(): void {
+                console.log("edit- Funktion ist klickbar");
+                //name.contentEditable = true;
+                //amount.contentEditable = true;
+                //comment.contentEditable = true;
+                //date.contentEditable = true;
 
-//Der ItemContainer entfernt das item Kind durch den Click des <i> trash Elements
-function deleteItem(): void {
-    itemContainer.removeChild(item);
 }
 
- //Die Paragraphen werden als Kinder entfernt und durch die obrigen, passenden Text/- und Inputfelder ersetzt. Die davorigen Eingaben bleiben erhalten; Die Felder kann man wieder bearbeiten und durch einen neuen Button eingeben
- //       function editItem(): void {}
+});
+
+}
 
 }
