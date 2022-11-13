@@ -1,0 +1,22 @@
+#amountID {
+    width: 60px;
+   height: 15px;
+ }
+
+.addedDiv {
+    width: 500px;
+    margin: 30px;
+    background-color: rgb(183, 223, 223);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.amount {
+   width: 60px;
+   height: 15px;
+}
+
+.hidden {
+    display: none !important;
+}
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L05_Client</title>
+    <link rel="stylesheet" href="style.css">
+    <script src= "script.js"></script>
+    <script src= "GenerateContent.js"></script>
+    <script src= "Data.js"></script>
+    <script src="https://kit.fontawesome.com/5e8370895b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+</head>
+<body>
+    <h1>Einkaufsliste</h1>
+    <input id = "inputID" type = "text" placeholder="Add another item">
+    <input id="amountID" type="number" placeholder="amount" input>
+    <textarea id = "commentID" placeholder = "Add your comment"></textarea>
+    <input id = "dateID" type = "date">
+    <button type = "button" form="form" id = "btn">Add</button>
+    <button type="reset" form="form">Reset</button>
+
+    <form id = "form">
+    <div id = "itemContainer">
+        <div class = "addedDiv">
+            <input class = "check" type = "checkbox">
+            <p class = "addedItem">Erdbeeren</p>
+            <p class = "addedAmount">20</p>
+            <p class = "addedComment">Tortenbeschmückung</p>
+            <p class = "addedDate">29.10.2022</p>
+            <i class="fa-solid fa-pen-to-square"></i>
+            <i class="fa-solid fa-trash-can"></i>
+        </div>
+
+        <div class = "addedDiv">
+            <input class = "check" type = "checkbox">
+            <p class = "addedItem">Milch</p>
+            <p class = "addedAmount">4</p>
+            <p class = "addedComment">Milch ist für den Kakao</p>
+            <p class = "addedDate">02.11.2022</p>
+            <i class="fa-solid fa-pen-to-square"></i>
+            <i class="fa-solid fa-trash-can"></i>
+        </div>
+    </div>
+</form>
+</body>
+</html>
