@@ -82,6 +82,7 @@ function handleLoad(_event: Event): void {
         function deleteItem(): void {
         itemContainer.removeChild(item);
     }
+        let done: HTMLElement;
     
         function editItem(): void {
                 console.log("edit- Funktion ist klickbar");

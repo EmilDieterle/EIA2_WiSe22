@@ -66,6 +66,7 @@ var L04_Datenstruktur;
             function deleteItem() {
                 itemContainer.removeChild(item);
             }
+            let done;
             function editItem() {
                 console.log("edit- Funktion ist klickbar");
                 name.contentEditable = true;
