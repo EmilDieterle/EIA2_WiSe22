@@ -29,7 +29,7 @@ var L05_Client;
             console.log("sendItem");
             let formData = new FormData(form);
             let query = new URLSearchParams(formData);
-            await fetch("index.html?" + query.toString());
+            await fetch("L05_Client.html?" + query.toString());
             alert("Item sent");
         }
         selectorButton.addEventListener("click", function () {

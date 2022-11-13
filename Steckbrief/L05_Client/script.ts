@@ -37,7 +37,7 @@ namespace L05_Client {
                 console.log("sendItem");
                 let formData: formData = new FormData(form);
                 let query: URLSearchParams = new URLSearchParams(<any>formData);
-                await fetch("index.html?" + query.toString());
+                await fetch("L05_Client.html?" + query.toString());
                 alert("Item sent");
 
             }
