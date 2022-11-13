@@ -9,7 +9,11 @@ namespace L05_Client {
 
     window.addEventListener("load", handleLoad);
     
-    function handleLoad(_event: Event): void {
+    async function handleLoad(_event: Event): Promise <void> {
+
+            let response: Response = await fetch("Data.json");
+            let offer: string = await response.text();
+            let data: Data = JSON.parse(offer);
     
             function generateContent(data);
     

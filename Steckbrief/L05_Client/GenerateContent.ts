@@ -1,5 +1,17 @@
 namespace L05_Client {
     export function generateContent(_data: Data) {
+
+        export interface Item {
+            name: string;
+            amount: number;
+            comment: string;
+            date: string;
+        }
+    
+        export interface Data {
+            [category: string]: Item[];
+        }
+        
         console.log(_data);
         for (let category in _data) {
             let items: Item[] = _data[category];

@@ -8,7 +8,10 @@ Datum: <12.10.2022>
 var L05_Client;
 (function (L05_Client) {
     window.addEventListener("load", handleLoad);
-    function handleLoad(_event) {
+    async function handleLoad(_event) {
+        let response = await fetch("Data.json");
+        let offer = await response.text();
+        let data = JSON.parse(offer);
         let itemContainer = document.querySelector("#itemContainer");
         let selectorInput = document.querySelector("#inputID");
         let selectorAmount = document.querySelector("#amountID");
