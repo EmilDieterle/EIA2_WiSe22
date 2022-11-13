@@ -33,25 +33,25 @@ function handleLoad(_event: Event): void {
         check.classList.add("check");
         itemContainer.appendChild(check);
 
-        let name: HTMLParagraphElement = document.createElement("label");
+        let name: HTMLLabelElement = document.createElement("label");
         name.classList.add("addedItem");
         name.innerText = selectorInput.value;
         itemContainer.appendChild(name);
         selectorInput.value = "";
 
-        let amount: HTMLParagraphElement = document.createElement("label");
+        let amount: HTMLLabelElement = document.createElement("label");
         amount.classList.add("addedAmount");
         amount.innerText = selectorAmount.value;
         itemContainer.appendChild(amount);
         selectorAmount.value = "";
 
-        let comment: HTMLParagraphElement = document.createElement("label");
+        let comment: HTMLLabelElement = document.createElement("label");
         comment.classList.add("addedComment");
         comment.innerText = selectorComment.value;
         itemContainer.appendChild(comment);
         selectorComment.value = "";
 
-        let date: HTMLParagraphElement = document.createElement("label");
+        let date: HTMLLabelElement = document.createElement("label");
         date.classList.add("addedDate");
         date.innerText = selectorDate.value;
         itemContainer.appendChild(date);
