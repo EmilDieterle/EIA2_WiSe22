@@ -84,6 +84,18 @@ var L05_Client;
                 amount.contentEditable = true;
                 comment.contentEditable = true;
                 date.contentEditable = true;
+                let done = document.createElement("i");
+                done.classList.add("fa-solid", "fa-circle-check");
+                item.appendChild(done);
+                done.addEventListener("click", endEditable);
+                function endEditable() {
+                    console.log("endEditable ist klickbar");
+                    name.contentEditable = false;
+                    amount.contentEditable = false;
+                    comment.contentEditable = false;
+                    date.contentEditable = false;
+                    item.removeChild(done);
+                }
             }
         });
     }

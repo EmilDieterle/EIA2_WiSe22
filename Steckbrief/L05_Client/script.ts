@@ -100,16 +100,32 @@ namespace L05_Client {
         }
         
             function editItem(): void {
-                    console.log("edit- Funktion ist klickbar");
-                    name.contentEditable = true;
-                    amount.contentEditable = true;
-                    comment.contentEditable = true;
-                    date.contentEditable = true;
+            console.log("edit- Funktion ist klickbar");
+            name.contentEditable = true;
+            amount.contentEditable = true;
+            comment.contentEditable = true;
+            date.contentEditable = true;
+
+            let done: HTMLElement = document.createElement("i");
+            done.classList.add("fa-solid", "fa-circle-check");
+            item.appendChild(done);
+
+            done.addEventListener("click", endEditable);
+
+            function endEditable(): void {
+                console.log("endEditable ist klickbar");
+                name.contentEditable = false;
+                amount.contentEditable = false;
+                comment.contentEditable = false;
+                date.contentEditable = false;
+                item.removeChild(done);
 
             }
-    
-        });
 
-    }
+        }
+    
+    });
+
+}
 
 }
