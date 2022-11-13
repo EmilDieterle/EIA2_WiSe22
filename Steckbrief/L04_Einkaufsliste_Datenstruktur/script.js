@@ -25,22 +25,22 @@ var L04_Datenstruktur;
             check.type = "checkbox";
             check.classList.add("check");
             itemContainer.appendChild(check);
-            let name = document.createElement("p");
+            let name = document.createElement("label");
             name.classList.add("addedItem");
             name.innerText = selectorInput.value;
             itemContainer.appendChild(name);
             selectorInput.value = "";
-            let amount = document.createElement("p");
+            let amount = document.createElement("label");
             amount.classList.add("addedAmount");
             amount.innerText = selectorAmount.value;
             itemContainer.appendChild(amount);
             selectorAmount.value = "";
-            let comment = document.createElement("p");
+            let comment = document.createElement("label");
             comment.classList.add("addedComment");
             comment.innerText = selectorComment.value;
             itemContainer.appendChild(comment);
             selectorComment.value = "";
-            let date = document.createElement("p");
+            let date = document.createElement("label");
             date.classList.add("addedDate");
             date.innerText = selectorDate.value;
             itemContainer.appendChild(date);
@@ -68,10 +68,22 @@ var L04_Datenstruktur;
             }
             function editItem() {
                 console.log("edit- Funktion ist klickbar");
-                //name.contentEditable = true;
-                //amount.contentEditable = true;
-                //comment.contentEditable = true;
-                //date.contentEditable = true;
+                name.contentEditable = true;
+                amount.contentEditable = true;
+                comment.contentEditable = true;
+                date.contentEditable = true;
+                let done = document.createElement("i");
+                done.classList.add("fa-solid", "fa-circle-check");
+                item.appendChild(done);
+                done.addEventListener("click", endEditable);
+                function endEditable() {
+                    console.log("endEditable ist klickbar");
+                    name.contentEditable = false;
+                    amount.contentEditable = false;
+                    comment.contentEditable = false;
+                    date.contentEditable = false;
+                    item.removeChild(done);
+                }
             }
         });
     }

@@ -105,12 +105,11 @@ namespace L05_Client {
                     amount.contentEditable = true;
                     comment.contentEditable = true;
                     date.contentEditable = true;
+
+            }
     
+        });
+
     }
-    
-    });
-    
-    }
-    
-    }
-    
+
+}

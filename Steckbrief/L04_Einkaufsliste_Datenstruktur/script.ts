@@ -33,25 +33,25 @@ function handleLoad(_event: Event): void {
         check.classList.add("check");
         itemContainer.appendChild(check);
 
-        let name: HTMLParagraphElement = document.createElement("p");
+        let name: HTMLParagraphElement = document.createElement("label");
         name.classList.add("addedItem");
         name.innerText = selectorInput.value;
         itemContainer.appendChild(name);
         selectorInput.value = "";
 
-        let amount: HTMLParagraphElement = document.createElement("p");
+        let amount: HTMLParagraphElement = document.createElement("label");
         amount.classList.add("addedAmount");
         amount.innerText = selectorAmount.value;
         itemContainer.appendChild(amount);
         selectorAmount.value = "";
 
-        let comment: HTMLParagraphElement = document.createElement("p");
+        let comment: HTMLParagraphElement = document.createElement("label");
         comment.classList.add("addedComment");
         comment.innerText = selectorComment.value;
         itemContainer.appendChild(comment);
         selectorComment.value = "";
 
-        let date: HTMLParagraphElement = document.createElement("p");
+        let date: HTMLParagraphElement = document.createElement("label");
         date.classList.add("addedDate");
         date.innerText = selectorDate.value;
         itemContainer.appendChild(date);
@@ -85,10 +85,26 @@ function handleLoad(_event: Event): void {
     
         function editItem(): void {
                 console.log("edit- Funktion ist klickbar");
-                //name.contentEditable = true;
-                //amount.contentEditable = true;
-                //comment.contentEditable = true;
-                //date.contentEditable = true;
+                name.contentEditable = true;
+                amount.contentEditable = true;
+                comment.contentEditable = true;
+                date.contentEditable = true;
+
+                let done: HTMLElement = document.createElement("i");
+                done.classList.add("fa-solid", "fa-circle-check");
+                item.appendChild(done);
+
+                done.addEventListener("click", endEditable);
+
+                function endEditable(): void {
+                    console.log("endEditable ist klickbar");
+                    name.contentEditable = false;
+                    amount.contentEditable = false;
+                    comment.contentEditable = false;
+                    date.contentEditable = false;
+                    item.removeChild(done);
+    
+}
 
 }
 
