@@ -104,11 +104,11 @@ function handleLoad(_event: Event): void {
                     date.contentEditable = false;
                     item.removeChild(done);
     
-}
+            }
 
-}
+        }
 
-});
+    });
 
 }
 
