@@ -38,7 +38,7 @@ namespace L05_Client {
                 let formData: formData = new FormData(form);
                 let query: URLSearchParams = new URLSearchParams(<any>formData);
                 await fetch("L05_Client.html" + query.toString());
-                alert("Item sent");
+                console.log("Item sent");
 
             }
     

@@ -30,7 +30,7 @@ var L05_Client;
             let formData = new FormData(form);
             let query = new URLSearchParams(formData);
             await fetch("L05_Client.html" + query.toString());
-            alert("Item sent");
+            console.log("Item sent");
         }
         selectorButton.addEventListener("click", function () {
             let check = document.createElement("input");
