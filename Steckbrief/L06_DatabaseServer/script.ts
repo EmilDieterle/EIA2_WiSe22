@@ -37,7 +37,7 @@ namespace L06_DatabaseServer {
                 console.log("sendItem");
                 let formData: formData = new FormData(form);
                 let query: URLSearchParams = new URLSearchParams(<any>formData);
-                await fetch("index.html" + query.toString());
+                await fetch("L06_DatabaseServer" + query.toString());
                 console.log("Item sent");
 
             }
