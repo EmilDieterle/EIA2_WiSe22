@@ -29,7 +29,7 @@ var L06_DatabaseServer;
             console.log("sendItem");
             let formData = new FormData(form);
             let query = new URLSearchParams(formData);
-            await fetch("L06_DatabaseServer" + query.toString());
+            await fetch("index.html" + query.toString());
             console.log("Item sent");
         }
         selectorButton.addEventListener("click", function () {
