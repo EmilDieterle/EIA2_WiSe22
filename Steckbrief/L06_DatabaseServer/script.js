@@ -23,8 +23,18 @@ var L06_DatabaseServer;
         let amount = document.querySelectorAll(".addedAmount");
         let comment = document.querySelectorAll(".addedComment");
         let date = document.querySelectorAll(".addedDate");
-        let formData = new FormData(form);
         selectorButton.addEventListener("click", sendItem);
+        let formData = new FormData(form);
+        let json = {};
+        for (let key of formData.keys())
+            if (!json[key]) {
+                let values = formData.getAll(key);
+                json[key] = values.length > 1 ? values : values[0];
+            }
+        let query = new URLSearchParams();
+        query.set("command", "insert");
+        query.set("collection", "Orders");
+        query.set("data", JSON.stringify(json));
         async function sendItem(_event) {
             console.log("sendItem");
             let formData = new FormData(form);

@@ -29,9 +29,26 @@ namespace L06_DatabaseServer {
             let amount: NodeListOf<HTMLElement> = document.querySelectorAll(".addedAmount") as NodeListOf<HTMLElement>;
             let comment: NodeListOf<HTMLElement> = document.querySelectorAll(".addedComment") as NodeListOf<HTMLElement>;
             let date: NodeListOf<HTMLElement> = document.querySelectorAll(".addedDate") as NodeListOf<HTMLElement>;
-            let formData: formData = new FormData(form);
 
             selectorButton.addEventListener("click", sendItem);
+
+            interface FormDataJSON {
+                [key: string]: FormDataEntryValue | FormDataEntryValue[];
+              }
+              
+            let formData: FormData = new FormData(form);
+            let json: FormDataJSON = {};
+              
+            for (let key of formData.keys())
+                if (!json[key]) {
+                  let values: FormDataEntryValue[] = formData.getAll(key);
+                  json[key] = values.length > 1 ? values : values[0];
+                }
+
+            let query: URLSearchParams = new URLSearchParams();
+            query.set("command", "insert");
+            query.set("collection", "Orders");
+            query.set("data", JSON.stringify(json));
 
             async function sendItem(_event: Event): Promise<void> {
                 console.log("sendItem");
